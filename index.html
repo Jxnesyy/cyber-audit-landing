@@ -9,68 +9,139 @@
     rel="stylesheet"
   />
   <style>
-    body { background: #0f172a; color: #cbd5e1; font-family: monospace; }
+    body {
+      background: #0f172a;
+      color: #cbd5e1;
+      font-family: monospace;
+    }
     .hero-bg {
       background: url('https://source.unsplash.com/1600x900/?cybersecurity') center/cover no-repeat;
       background-blend-mode: multiply;
-      background-color: rgba(15,23,42,0.7);
+      background-color: rgba(15,23,42,0.8);
     }
     .card-hover:hover {
       transform: translateY(-3px);
       box-shadow: 0 6px 18px rgba(0,0,0,0.8);
     }
-    details summary::-webkit-details-marker { display: none; }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
   </style>
 </head>
 <body class="antialiased">
 
-  <!-- HERO (compressed) -->
-  <header class="hero-bg py-20 text-center px-6">
-    <h1 class="text-4xl md:text-5xl font-bold text-sky-400 mb-2">Code of Jxnesyy</h1>
-    <p class="text-base md:text-lg opacity-80 mb-6">
+  <!-- HERO -->
+  <header class="hero-bg py-8 text-center px-6">
+    <h1 class="text-4xl md:text-5xl font-bold text-sky-400 mb-1">Code of Jxnesyy</h1>
+    <p class="text-base md:text-lg opacity-80 mb-4">
       “I ethically hack your home so real threats never get the chance.”
     </p>
-    <div class="space-x-4">
-      <a href="#contact" class="px-5 py-2 bg-sky-600 hover:bg-sky-700 rounded text-white font-semibold transition">
+    <div class="space-x-3">
+      <a href="#contact" class="px-4 py-2 bg-sky-600 hover:bg-sky-700 rounded text-white font-semibold transition">
         Book Your Audit
       </a>
       <a href="https://github.com/Jxnesyy/cyber-audit-blueprint"
-         class="px-5 py-2 border border-sky-600 rounded text-sky-300 hover:bg-slate-800 transition">
+         class="px-4 py-2 border border-sky-600 rounded text-sky-300 hover:bg-slate-800 transition">
         View Framework
       </a>
     </div>
   </header>
 
-  <!-- THREAT SPOTLIGHT -->
+  <!-- RECENT CYBERATTACKS -->
   <section id="threat" class="py-12 px-6 lg:px-20 bg-slate-900">
-    <h2 class="text-3xl font-bold text-center text-red-400 mb-6">🚨 Recent Cyberattacks</h2>
+    <h2 class="flex justify-center items-center text-3xl font-extrabold text-red-500 mb-8 space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M13 16h-1v-4h-1m1-4h.01M12 3.055A9.001 9.001 0 013 12c0 4.97 4.03 9 9 9s9-4.03 9-9a9.001 
+             9.001 0 00-9-8.945z" />
+      </svg>
+      <span>Recent Cyberattacks</span>
+    </h2>
+
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
-        <summary class="cursor-pointer font-semibold text-white">⚡ Operation Sindoor</summary>
-        <p class="mt-2 opacity-80 text-sm">
-          <strong>June 2025:</strong> India fends off 200k+ attacks on its power grid—national collapse averted.
-        </p>
+      <!-- Operation Sindoor -->
+      <details class="group bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-xl border-l-4 border-red-500 transition">
+        <summary class="flex justify-between items-center cursor-pointer text-white text-lg font-semibold">
+          <span class="flex items-center space-x-2">
+            <span class="text-red-400">⚡</span>
+            <span>Operation Sindoor</span>
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="mt-4 text-slate-300 text-sm space-y-2">
+          <p><strong>Date:</strong> June 2025</p>
+          <p><strong>Attackers:</strong> State-sponsored group</p>
+          <p><strong>Impact:</strong> 200,000+ intrusion attempts—risk of nationwide blackout.</p>
+          <p><strong>Key Takeaway:</strong> Enforce strict ICS segmentation & real-time monitoring.</p>
+        </div>
       </details>
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
-        <summary class="cursor-pointer font-semibold text-white">📱 iPhone Zero-Click</summary>
-        <p class="mt-2 opacity-80 text-sm">
-          <strong>May 2025:</strong> Silent exploits breach high-value targets’ phones without user action.
-        </p>
+
+      <!-- iPhone Zero-Click -->
+      <details class="group bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-xl border-l-4 border-red-500 transition">
+        <summary class="flex justify-between items-center cursor-pointer text-white text-lg font-semibold">
+          <span class="flex items-center space-x-2">
+            <span class="text-red-400">📱</span>
+            <span>iPhone Zero-Click</span>
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="mt-4 text-slate-300 text-sm space-y-2">
+          <p><strong>Date:</strong> May 2025</p>
+          <p><strong>Attackers:</strong> Advanced persistent threat</p>
+          <p><strong>Impact:</strong> Remote compromise of high-value smartphones without user action.</p>
+          <p><strong>Key Takeaway:</strong> Keep OS & security patches fully up to date.</p>
+        </div>
       </details>
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
-        <summary class="cursor-pointer font-semibold text-white">💾 Bank Sepah Breach</summary>
-        <p class="mt-2 opacity-80 text-sm">
-          <strong>Mar 2025:</strong> 42M records stolen—customer identities & finances exposed.
-        </p>
+
+      <!-- Bank Sepah Breach -->
+      <details class="group bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-xl border-l-4 border-red-500 transition">
+        <summary class="flex justify-between items-center cursor-pointer text-white text-lg font-semibold">
+          <span class="flex items-center space-x-2">
+            <span class="text-red-400">💾</span>
+            <span>Bank Sepah Breach</span>
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="mt-4 text-slate-300 text-sm space-y-2">
+          <p><strong>Date:</strong> March 2025</p>
+          <p><strong>Attackers:</strong> Cybercrime syndicate</p>
+          <p><strong>Impact:</strong> 42 million customer records exposed.</p>
+          <p><strong>Key Takeaway:</strong> Encrypt PII at rest & enforce zero-trust access.</p>
+        </div>
       </details>
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
-        <summary class="cursor-pointer font-semibold text-white">🔒 M&S Ransomware</summary>
-        <p class="mt-2 opacity-80 text-sm">
-          <strong>May 2025:</strong> Retail giant held hostage by DragonForce—systems frozen, trust shattered.
-        </p>
+
+      <!-- M&S Ransomware -->
+      <details class="group bg-slate-800 p-6 rounded-xl shadow-md hover:shadow-xl border-l-4 border-red-500 transition">
+        <summary class="flex justify-between items-center cursor-pointer text-white text-lg font-semibold">
+          <span class="flex items-center space-x-2">
+            <span class="text-red-400">🔒</span>
+            <span>M&S Ransomware</span>
+          </span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <div class="mt-4 text-slate-300 text-sm space-y-2">
+          <p><strong>Date:</strong> May 2025</p>
+          <p><strong>Attackers:</strong> DragonForce gang</p>
+          <p><strong>Impact:</strong> Systems locked, operations halted for days.</p>
+          <p><strong>Key Takeaway:</strong> Maintain offline backups & test incident response.</p>
+        </div>
       </details>
     </div>
-    <div class="text-center mt-4">
+
+    <!-- Jump to Why -->
+    <div class="text-center mt-6">
       <a href="#why" class="text-sky-400 underline hover:text-white">Why this matters ↓</a>
     </div>
   </section>
@@ -79,48 +150,46 @@
   <section id="why" class="py-12 px-6 lg:px-20">
     <h2 class="text-3xl font-bold text-center text-sky-400 mb-6">Why Code of Jxnesyy?</h2>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-sky-500">
+      <details class="bg-slate-800 p-4 rounded-lg card-hover border border-sky-500">
         <summary class="cursor-pointer font-semibold text-sky-300">📝 Checklists</summary>
         <p class="mt-2 opacity-80 text-sm">Guided audit phases—never miss a critical step.</p>
       </details>
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-sky-500">
+      <details class="bg-slate-800 p-4 rounded-lg card-hover border border-sky-500">
         <summary class="cursor-pointer font-semibold text-sky-300">⚙️ Scripts</summary>
         <p class="mt-2 opacity-80 text-sm">Automate recon, scanning & reporting.</p>
       </details>
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-sky-500">
+      <details class="bg-slate-800 p-4 rounded-lg card-hover border border-sky-500">
         <summary class="cursor-pointer font-semibold text-sky-300">📊 Reports</summary>
         <p class="mt-2 opacity-80 text-sm">Professional templates for swift deliverables.</p>
       </details>
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-sky-500">
+      <details class="bg-slate-800 p-4 rounded-lg card-hover border border-sky-500">
         <summary class="cursor-pointer font-semibold text-sky-300">📚 Documentation</summary>
         <p class="mt-2 opacity-80 text-sm">Deep-dive philosophy & operational playbooks.</p>
       </details>
     </div>
   </section>
 
-  <!-- SERVICES & PRICING (Accordion) -->
-  <section id="offerings" class="py-12 px-6 lg:px-20 bg-slate-900 text-gray-100">
-    <div class="max-w-3xl mx-auto space-y-8">
-
-      <details class="bg-gray-800 p-6 rounded-lg border border-sky-500">
+  <!-- SERVICES & PRICING -->
+  <section id="offerings" class="py-12 px-6 lg:px-20 bg-slate-900">
+    <div class="max-w-3xl mx-auto space-y-8 text-gray-100">
+      <details class="bg-slate-800 p-6 rounded-lg border border-sky-500">
         <summary class="cursor-pointer font-semibold text-sky-300 text-lg">Services</summary>
         <ul class="mt-4 list-disc list-inside space-y-2 text-sm opacity-80">
-          <li><strong>Smart Home Audit:</strong> Deep scan of IoT devices, router vulnerabilities.</li>
+          <li><strong>Smart Home Audit:</strong> Deep scan of IoT devices & router vulnerabilities.</li>
           <li><strong>Home Office Audit:</strong> Harden desktops, laptops & networks.</li>
           <li><strong>Child Device Safety:</strong> Protect kids from online threats.</li>
           <li><strong>Ethical Hacking Report:</strong> Prioritized fixes + video walkthrough.</li>
         </ul>
       </details>
 
-      <details class="bg-gray-800 p-6 rounded-lg border border-sky-500">
+      <details class="bg-slate-800 p-6 rounded-lg border border-sky-500">
         <summary class="cursor-pointer font-semibold text-sky-300 text-lg">Pricing</summary>
         <ul class="mt-4 list-disc list-inside space-y-2 text-sm opacity-80">
           <li><strong>Mini Audit — £99:</strong> Quick recon & essentials summary.</li>
           <li><strong>Full Audit — £299:</strong> Complete checklist, recon & report.</li>
-          <li><strong>Custom Support — £499+:</strong> Personalized help & secure live session.</li>
+          <li><strong>Custom Support — £499+:</strong> Personalized help & secure session.</li>
         </ul>
       </details>
-
     </div>
   </section>
 
@@ -131,11 +200,11 @@
       <p class="mb-6 opacity-80">Ready to lock down your digital world? Drop me a line.</p>
       <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
         <input type="text" name="name" placeholder="Your Name" required
-               class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-sky-400 text-gray-100"/>
+               class="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded focus:ring-2 focus:ring-sky-400 text-gray-100"/>
         <input type="email" name="email" placeholder="Your Email" required
-               class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-sky-400 text-gray-100"/>
+               class="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded focus:ring-2 focus:ring-sky-400 text-gray-100"/>
         <textarea name="message" rows="4" placeholder="Your Message" required
-                  class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-sky-400 text-gray-100"></textarea>
+                  class="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded focus:ring-2 focus:ring-sky-400 text-gray-100"></textarea>
         <button type="submit"
                 class="w-full py-3 bg-sky-600 hover:bg-sky-700 rounded text-white font-semibold transition">
           Send Message
