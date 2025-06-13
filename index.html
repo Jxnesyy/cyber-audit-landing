@@ -10,116 +10,124 @@
   />
   <style>
     body { background: #0f172a; color: #cbd5e1; font-family: monospace; }
-    .hero-bg { background: url('https://source.unsplash.com/1600x900/?cybersecurity') center/cover no-repeat; }
-    .card-hover:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.8); }
+    .hero-bg {
+      background: url('https://source.unsplash.com/1600x900/?cybersecurity') center/cover no-repeat;
+      background-blend-mode: multiply;
+      background-color: rgba(15,23,42,0.7);
+    }
+    .card-hover:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.8);
+    }
     details summary::-webkit-details-marker { display: none; }
   </style>
 </head>
 <body class="antialiased">
 
-  <!-- HERO -->
-  <header class="hero-bg h-screen flex flex-col items-center justify-center text-center px-6 bg-black bg-opacity-60">
-    <h1 class="text-5xl md:text-6xl font-bold text-sky-400 mb-4">Code of Jxnesyy</h1>
-    <p class="text-lg md:text-xl opacity-80 mb-8">
+  <!-- HERO (compressed) -->
+  <header class="hero-bg py-20 text-center px-6">
+    <h1 class="text-4xl md:text-5xl font-bold text-sky-400 mb-2">Code of Jxnesyy</h1>
+    <p class="text-base md:text-lg opacity-80 mb-6">
       “I ethically hack your home so real threats never get the chance.”
     </p>
     <div class="space-x-4">
-      <a href="#contact" class="px-6 py-3 bg-sky-600 hover:bg-sky-700 rounded text-white font-semibold transition">
+      <a href="#contact" class="px-5 py-2 bg-sky-600 hover:bg-sky-700 rounded text-white font-semibold transition">
         Book Your Audit
       </a>
       <a href="https://github.com/Jxnesyy/cyber-audit-blueprint"
-         class="px-6 py-3 border border-sky-600 rounded text-sky-300 hover:bg-slate-800 transition">
+         class="px-5 py-2 border border-sky-600 rounded text-sky-300 hover:bg-slate-800 transition">
         View Framework
       </a>
     </div>
   </header>
 
   <!-- THREAT SPOTLIGHT -->
-  <section id="threat" class="py-16 px-6 lg:px-20 bg-slate-900">
-    <h2 class="text-4xl font-bold text-center text-red-400 mb-8">🚨 Recent Cyberattacks</h2>
+  <section id="threat" class="py-12 px-6 lg:px-20 bg-slate-900">
+    <h2 class="text-3xl font-bold text-center text-red-400 mb-6">🚨 Recent Cyberattacks</h2>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      <div class="bg-gray-800 p-6 rounded-lg card-hover transition-transform border-l-4 border-red-500">
-        <h3 class="font-semibold text-white mb-2">⚡ Operation Sindoor</h3>
-        <p class="opacity-80 text-sm">June 2025: India fends off 200k+ attacks on its power grid.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg card-hover transition-transform border-l-4 border-red-500">
-        <h3 class="font-semibold text-white mb-2">📱 iPhone Zero-Click</h3>
-        <p class="opacity-80 text-sm">May 2025: Silent exploits breach high-value targets’ phones.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg card-hover transition-transform border-l-4 border-red-500">
-        <h3 class="font-semibold text-white mb-2">💾 Bank Sepah Breach</h3>
-        <p class="opacity-80 text-sm">Mar 2025: 42M records stolen—customer data exposed.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg card-hover transition-transform border-l-4 border-red-500">
-        <h3 class="font-semibold text-white mb-2">🔒 M&S Ransomware</h3>
-        <p class="opacity-80 text-sm">May 2025: Retail titan held hostage by DragonForce gang.</p>
-      </div>
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
+        <summary class="cursor-pointer font-semibold text-white">⚡ Operation Sindoor</summary>
+        <p class="mt-2 opacity-80 text-sm">
+          <strong>June 2025:</strong> India fends off 200k+ attacks on its power grid—national collapse averted.
+        </p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
+        <summary class="cursor-pointer font-semibold text-white">📱 iPhone Zero-Click</summary>
+        <p class="mt-2 opacity-80 text-sm">
+          <strong>May 2025:</strong> Silent exploits breach high-value targets’ phones without user action.
+        </p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
+        <summary class="cursor-pointer font-semibold text-white">💾 Bank Sepah Breach</summary>
+        <p class="mt-2 opacity-80 text-sm">
+          <strong>Mar 2025:</strong> 42M records stolen—customer identities & finances exposed.
+        </p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
+        <summary class="cursor-pointer font-semibold text-white">🔒 M&S Ransomware</summary>
+        <p class="mt-2 opacity-80 text-sm">
+          <strong>May 2025:</strong> Retail giant held hostage by DragonForce—systems frozen, trust shattered.
+        </p>
+      </details>
     </div>
-    <div class="text-center mt-6">
-      <a href="#why" class="text-sky-400 underline hover:text-white">Learn why this matters ↓</a>
+    <div class="text-center mt-4">
+      <a href="#why" class="text-sky-400 underline hover:text-white">Why this matters ↓</a>
     </div>
   </section>
 
   <!-- WHY & CORE PILLARS -->
-  <section id="why" class="py-16 px-6 lg:px-20">
+  <section id="why" class="py-12 px-6 lg:px-20">
     <h2 class="text-3xl font-bold text-center text-sky-400 mb-6">Why Code of Jxnesyy?</h2>
-    <div class="max-w-4xl mx-auto grid gap-6 sm:grid-cols-2">
-      <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition border border-sky-500">
-        <h3 class="font-semibold text-sky-300 mb-2">📝 Checklists</h3>
-        <p class="opacity-80 text-sm">Guided audit phases—no step left behind.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition border border-sky-500">
-        <h3 class="font-semibold text-sky-300 mb-2">⚙️ Scripts</h3>
-        <p class="opacity-80 text-sm">Automate recon, scans & reporting.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition border border-sky-500">
-        <h3 class="font-semibold text-sky-300 mb-2">📊 Reports</h3>
-        <p class="opacity-80 text-sm">Professional templates for swift deliverables.</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition border border-sky-500">
-        <h3 class="font-semibold text-sky-300 mb-2">📚 Documentation</h3>
-        <p class="opacity-80 text-sm">Deep-dive philosophy & playbooks.</p>
-      </div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-sky-500">
+        <summary class="cursor-pointer font-semibold text-sky-300">📝 Checklists</summary>
+        <p class="mt-2 opacity-80 text-sm">Guided audit phases—never miss a critical step.</p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-sky-500">
+        <summary class="cursor-pointer font-semibold text-sky-300">⚙️ Scripts</summary>
+        <p class="mt-2 opacity-80 text-sm">Automate recon, scanning & reporting.</p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-sky-500">
+        <summary class="cursor-pointer font-semibold text-sky-300">📊 Reports</summary>
+        <p class="mt-2 opacity-80 text-sm">Professional templates for swift deliverables.</p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-sky-500">
+        <summary class="cursor-pointer font-semibold text-sky-300">📚 Documentation</summary>
+        <p class="mt-2 opacity-80 text-sm">Deep-dive philosophy & operational playbooks.</p>
+      </details>
     </div>
   </section>
 
   <!-- SERVICES & PRICING (Accordion) -->
-  <section id="offerings" class="py-16 px-6 lg:px-20 bg-slate-900 text-gray-100">
-    <div class="max-w-3xl mx-auto space-y-12">
+  <section id="offerings" class="py-12 px-6 lg:px-20 bg-slate-900 text-gray-100">
+    <div class="max-w-3xl mx-auto space-y-8">
 
-      <!-- Services -->
-      <div>
-        <h2 class="text-3xl font-bold text-center text-sky-400 mb-4">Services</h2>
-        <details class="bg-gray-800 p-6 rounded-lg border border-sky-500">
-          <summary class="cursor-pointer font-medium">Smart Home Audit</summary>
-          <p class="mt-2 opacity-80 text-sm">Deep scan of IoT devices, router vulnerabilities, hidden exposures.</p>
-        </details>
-        <details class="bg-gray-800 p-6 rounded-lg border border-sky-500 mt-4">
-          <summary class="cursor-pointer font-medium">Home Office Audit</summary>
-          <p class="mt-2 opacity-80 text-sm">Harden desktops, laptops & networks against intrusion.</p>
-        </details>
-      </div>
+      <details class="bg-gray-800 p-6 rounded-lg border border-sky-500">
+        <summary class="cursor-pointer font-semibold text-sky-300 text-lg">Services</summary>
+        <ul class="mt-4 list-disc list-inside space-y-2 text-sm opacity-80">
+          <li><strong>Smart Home Audit:</strong> Deep scan of IoT devices, router vulnerabilities.</li>
+          <li><strong>Home Office Audit:</strong> Harden desktops, laptops & networks.</li>
+          <li><strong>Child Device Safety:</strong> Protect kids from online threats.</li>
+          <li><strong>Ethical Hacking Report:</strong> Prioritized fixes + video walkthrough.</li>
+        </ul>
+      </details>
 
-      <!-- Pricing -->
-      <div>
-        <h2 class="text-3xl font-bold text-center text-sky-400 mb-4">Pricing</h2>
-        <details class="bg-gray-800 p-6 rounded-lg border border-sky-500">
-          <summary class="cursor-pointer font-medium">Mini Audit — £99</summary>
-          <p class="mt-2 opacity-80 text-sm">Quick recon & essentials summary.</p>
-        </details>
-        <details class="bg-gray-800 p-6 rounded-lg border border-sky-500 mt-4">
-          <summary class="cursor-pointer font-medium">Full Audit — £299</summary>
-          <p class="mt-2 opacity-80 text-sm">Complete checklist, recon & detailed report.</p>
-        </details>
-      </div>
+      <details class="bg-gray-800 p-6 rounded-lg border border-sky-500">
+        <summary class="cursor-pointer font-semibold text-sky-300 text-lg">Pricing</summary>
+        <ul class="mt-4 list-disc list-inside space-y-2 text-sm opacity-80">
+          <li><strong>Mini Audit — £99:</strong> Quick recon & essentials summary.</li>
+          <li><strong>Full Audit — £299:</strong> Complete checklist, recon & report.</li>
+          <li><strong>Custom Support — £499+:</strong> Personalized help & secure live session.</li>
+        </ul>
+      </details>
 
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-16 px-6 lg:px-20">
+  <section id="contact" class="py-12 px-6 lg:px-20">
     <div class="max-w-md mx-auto text-center">
-      <h2 class="text-3xl font-bold text-center text-sky-400 mb-4">Get in Touch</h2>
+      <h2 class="text-2xl font-bold text-sky-400 mb-4">Get in Touch</h2>
       <p class="mb-6 opacity-80">Ready to lock down your digital world? Drop me a line.</p>
       <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
         <input type="text" name="name" placeholder="Your Name" required
@@ -137,7 +145,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-8 text-center text-sm text-gray-500 bg-slate-900">
+  <footer class="py-6 text-center text-sm text-gray-500 bg-slate-900">
     © 2025 Jxnesyy — Built with 💻 & 🔒 | Ethical Hacker’s Toolkit<br/>
     Powered by <a href="https://github.com/Jxnesyy/cyber-audit-blueprint"
                 class="underline text-sky-400 hover:text-white">Code of Jxnesyy Blueprint</a>
