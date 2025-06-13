@@ -2,89 +2,135 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cyber Audit by Jxnesyy</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code of Jxnesyy — Ethical Hacker’s Toolkit</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
   <style>
-    body {
-      background: radial-gradient(circle at top left, #0f0f0f, #000000);
-      font-family: 'Courier New', monospace;
-    }
-    .hacker-glow {
-      text-shadow: 0 0 10px #00f11, 0 0 20px #00ff11, 0 0 30px #00ff11;
-    }
-    .hacker-box {
-      background: rgba(0, 0, 0, 0.8);
-      border: 1px solid #00ffae44;
-    }
-    a:hover {
-      text-decoration: underline;
+    /* subtle neon glow */
+    .neon {
+      text-shadow:
+        0 0 2px rgba(0,255,150,0.7),
+        0 0 5px rgba(0,255,150,0.5),
+        0 0 10px rgba(0,255,150,0.3);
     }
   </style>
 </head>
-<body class="text-green-400">
-  <header class="text-center py-12">
-    <h1 class="text-5xl font-bold hacker-glow">🛡️ Cyber Audit by Jxnesyy</h1>
-    <p class="mt-4 text-green-300">I ethically hack your home so real threats can’t.</p>
-    <a href="#contact" class="mt-6 inline-block px-8 py-3 bg-green-600 text-black font-bold rounded hover:bg-green-700 transition">📥 Book Your Audit</a>
+<body class="bg-gradient-to-br from-black to-gray-900 text-green-300 font-mono antialiased">
+
+  <!-- HERO -->
+  <header class="py-16 text-center px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-xl">
+      <svg class="w-16 h-16 mx-auto mb-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          d="M12 1l8 4v6c0 6-4 11-8 12-4-1-8-6-8-12V5l8-4z"/>
+      </svg>
+      <h1 class="text-4xl sm:text-5xl font-bold neon">Code of Jxnesyy</h1>
+      <p class="mt-4 text-lg sm:text-xl opacity-80">
+        I ethically hack your home so real threats never get the chance.
+      </p>
+      <a href="#contact" class="inline-block mt-8 px-8 py-3 bg-green-500 hover:bg-green-600 rounded-md text-black font-semibold transition">
+        Book Your Audit
+      </a>
+    </div>
   </header>
 
-  <section class="max-w-5xl mx-auto py-12 px-6">
-    <h2 class="text-3xl font-bold mb-6 hacker-glow">🧰 Services Offered</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="p-6 rounded-lg hacker-box">
-        <h3 class="text-2xl font-semibold">🔍 Smart Home Audit</h3>
-        <p class="mt-2">Deep scan of all IoT devices, router vulnerabilities, and hidden exposures.</p>
-      </div>
-      <div class="p-6 rounded-lg hacker-box">
-        <h3 class="text-2xl font-semibold">💻 Home Office Audit</h3>
-        <p class="mt-2">Hardens devices and networks against phishing, malware, and intrusion.</p>
-      </div>
-      <div class="p-6 rounded-lg hacker-box">
-        <h3 class="text-2xl font-semibold">🧒 Child Device Safety</h3>
-        <p class="mt-2">Helps parents protect their kids from online threats and rogue apps.</p>
-      </div>
-      <div class="p-6 rounded-lg hacker-box">
-        <h3 class="text-2xl font-semibold">📄 Ethical Hacking Report</h3>
-        <p class="mt-2">PDF blueprint with prioritized fixes and optional video walkthrough.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-12 bg-black border-t border-green-500">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-6 hacker-glow">💰 Pricing</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-lg hacker-box">
-          <h3 class="text-xl font-bold mb-2">Mini Audit</h3>
-          <p>£99 - Quick recon and essentials summary</p>
+  <!-- SERVICES -->
+  <section id="services" class="py-12 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-4xl">
+      <h2 class="text-2xl font-bold neon mb-6 text-center">Services Offered</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="border border-green-600 rounded-lg p-6 hover:bg-gray-800 transition">
+          <h3 class="text-xl font-semibold mb-2">Smart Home Audit</h3>
+          <p>Deep scan of IoT devices, router vulnerabilities, and hidden exposures.</p>
         </div>
-        <div class="p-6 rounded-lg hacker-box border border-green-500">
-          <h3 class="text-xl font-bold mb-2">Full Audit</h3>
-          <p>£299 - Full checklist, recon, and detailed report</p>
+        <div class="border border-green-600 rounded-lg p-6 hover:bg-gray-800 transition">
+          <h3 class="text-xl font-semibold mb-2">Home Office Audit</h3>
+          <p>Hardens devices and networks against phishing, malware, and intrusion.</p>
         </div>
-        <div class="p-6 rounded-lg hacker-box">
-          <h3 class="text-xl font-bold mb-2">Custom Support</h3>
-          <p>£499+ - Personalized help + secure live session</p>
+        <div class="border border-green-600 rounded-lg p-6 hover:bg-gray-800 transition">
+          <h3 class="text-xl font-semibold mb-2">Child Device Safety</h3>
+          <p>Protects your kids from online threats and rogue apps.</p>
+        </div>
+        <div class="border border-green-600 rounded-lg p-6 hover:bg-gray-800 transition">
+          <h3 class="text-xl font-semibold mb-2">Ethical Hacking Report</h3>
+          <p>PDF blueprint with prioritized fixes + optional video walkthrough.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="py-12 px-6 max-w-3xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-4 hacker-glow">📬 Contact & Bookings</h2>
-    <p class="text-center text-green-300 mb-6">Email: <a href="mailto:jxnesyy.cybersafe@gmail.com" class="underline">jxnesyy.cybersafe@gmail.com</a><br>
-    or use the secure form below:</p>
-    <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
-      <input type="text" name="name" placeholder="Your Name" class="w-full p-3 bg-gray-800 text-green-200 rounded" required>
-      <input type="email" name="email" placeholder="Your Email" class="w-full p-3 bg-gray-800 text-green-200 rounded" required>
-      <textarea name="message" placeholder="Tell me your situation" class="w-full p-3 bg-gray-800 text-green-200 rounded h-32" required></textarea>
-      <button type="submit" class="bg-green-600 px-6 py-2 rounded font-bold hover:bg-green-700">Submit</button>
-    </form>
+  <!-- PRICING -->
+  <section id="pricing" class="py-12 bg-gray-900 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-4xl">
+      <h2 class="text-2xl font-bold neon mb-6 text-center">Pricing</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="border border-green-600 rounded-lg p-6 hover:bg-gray-800 transition">
+          <h3 class="text-xl font-semibold mb-2">Mini Audit</h3>
+          <p class="font-bold">£99</p>
+          <p>Quick recon + essentials summary</p>
+        </div>
+        <div class="border border-green-600 rounded-lg p-6 hover:bg-gray-800 transition">
+          <h3 class="text-xl font-semibold mb-2">Full Audit</h3>
+          <p class="font-bold">£299</p>
+          <p>Complete checklist, recon, & detailed report</p>
+        </div>
+        <div class="border border-green-600 rounded-lg p-6 hover:bg-gray-800 transition">
+          <h3 class="text-xl font-semibold mb-2">Custom Support</h3>
+          <p class="font-bold">£499+</p>
+          <p>Personalized help + live secure session</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer class="text-center text-green-400 text-sm py-8">
-    &copy; 2025 Jxnesyy — Built with 💻 and 🔐 | Ethical Hacker’s Toolkit
+  <!-- CONTACT -->
+  <section id="contact" class="py-12 px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-md text-center">
+      <h2 class="text-2xl font-bold neon mb-4">Contact &amp; Bookings</h2>
+      <p class="mb-6">
+        <a href="mailto:jxnesyy.cybersafe@gmail.com" class="underline hover:text-green-200">
+          jxnesyy.cybersafe@gmail.com
+        </a>
+      </p>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="Tell me your situation"
+          required
+          class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
+        ></textarea>
+        <button
+          type="submit"
+          class="w-full py-3 bg-green-500 hover:bg-green-600 rounded text-black font-semibold transition"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-6 text-center text-sm text-gray-500">
+    © 2025 Jxnesyy — Built with 💻 & 🔒 | Ethical Hacker’s Toolkit
   </footer>
+
 </body>
 </html>
