@@ -9,25 +9,71 @@
     rel="stylesheet"
   />
   <style>
-    /* subtle neon glow */
-    .neon {
-      text-shadow:
-        0 0 2px rgba(0,255,150,0.7),
-        0 0 5px rgba(0,255,150,0.5),
-        0 0 10px rgba(0,255,150,0.3);
+    /* glowing neon text */
+    @keyframes slide {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    .animated-text {
+      background: linear-gradient(
+        90deg,
+        #22c55e,
+        #72efdd,
+        #22c55e
+      );
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slide 5s linear infinite;
+    }
+    /* cycling hue on shield */
+    @keyframes hue {
+      0%   { filter: hue-rotate(0deg);   }
+      100% { filter: hue-rotate(360deg); }
+    }
+    .hue-rotate {
+      animation: hue 10s linear infinite;
+    }
+    /* style for details/summary boxes */
+    details {
+      border: 2px solid #16a34a;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      transition: background-color 0.3s;
+    }
+    details[open] {
+      background-color: #1f2937;
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary .arrow {
+      transition: transform 0.3s;
+    }
+    details[open] summary .arrow {
+      transform: rotate(180deg);
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-black to-gray-900 text-green-600 font-mono antialiased">
+<body class="bg-gradient-to-br from-black to-gray-900 text-green-300 font-mono antialiased">
 
   <!-- HERO -->
   <header class="py-16 text-center px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-xl">
-      <svg class="w-16 h-16 mx-auto mb-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-16 h-16 mx-auto mb-4 hue-rotate" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
           d="M12 1l8 4v6c0 6-4 11-8 12-4-1-8-6-8-12V5l8-4z"/>
       </svg>
-      <h1 class="text-4xl sm:text-5xl font-bold neon">Code of Jxnesyy</h1>
+      <h1 class="text-4xl sm:text-5xl font-bold animated-text">Code of Jxnesyy</h1>
       <p class="mt-4 text-lg sm:text-xl opacity-80">
         I ethically hack your home so real threats never get the chance.
       </p>
@@ -39,57 +85,112 @@
 
   <!-- SERVICES -->
   <section id="services" class="py-12 px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-4xl">
-      <h2 class="text-2xl font-bold neon mb-6 text-center">Services Offered</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="border border-green-800 rounded-lg p-6 hover:bg-gray-800 transition">
-          <h3 class="text-xl font-semibold mb-2">Smart Home Audit</h3>
-          <p>Deep scan of IoT devices, router vulnerabilities, and hidden exposures.</p>
-        </div>
-        <div class="border border-green-800 rounded-lg p-6 hover:bg-gray-800 transition">
-          <h3 class="text-xl font-semibold mb-2">Home Office Audit</h3>
-          <p>Hardens devices and networks against phishing, malware, and intrusion.</p>
-        </div>
-        <div class="border border-green-800 rounded-lg p-6 hover:bg-gray-800 transition">
-          <h3 class="text-xl font-semibold mb-2">Child Device Safety</h3>
-          <p>Protects your kids from online threats and rogue apps.</p>
-        </div>
-        <div class="border border-green-800 rounded-lg p-6 hover:bg-gray-800 transition">
-          <h3 class="text-xl font-semibold mb-2">Ethical Hacking Report</h3>
-          <p>PDF blueprint with prioritized fixes + optional video walkthrough.</p>
-        </div>
-      </div>
+    <div class="mx-auto max-w-4xl space-y-6">
+      <h2 class="text-2xl font-bold animated-text text-center">Services Offered</h2>
+
+      <details>
+        <summary>
+          <span>🔍 Smart Home Audit</span>
+          <span class="arrow">⯆</span>
+        </summary>
+        <p class="mt-2 text-green-200">
+          Deep scan of IoT devices, router vulnerabilities, and hidden exposures.
+        </p>
+        <ul class="mt-2 list-disc list-inside text-green-200">
+          <li>Device fingerprinting</li>
+          <li>Weak default credentials</li>
+          <li>Open ports & services</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>
+          <span>💻 Home Office Audit</span>
+          <span class="arrow">⯆</span>
+        </summary>
+        <p class="mt-2 text-green-200">
+          Hardens devices and networks against phishing, malware, and intrusion.
+        </p>
+        <ul class="mt-2 list-disc list-inside text-green-200">
+          <li>Email phishing simulation</li>
+          <li>Antivirus & patch checks</li>
+          <li>VPN & proxy validation</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>
+          <span>👶 Child Device Safety</span>
+          <span class="arrow">⯆</span>
+        </summary>
+        <p class="mt-2 text-green-200">
+          Protects your kids from online threats and rogue apps.
+        </p>
+        <ul class="mt-2 list-disc list-inside text-green-200">
+          <li>Parental control audit</li>
+          <li>App permission review</li>
+          <li>Safe browsing setup</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>
+          <span>📄 Ethical Hacking Report</span>
+          <span class="arrow">⯆</span>
+        </summary>
+        <p class="mt-2 text-green-200">
+          PDF blueprint with prioritized fixes + optional video walkthrough.
+        </p>
+        <ul class="mt-2 list-disc list-inside text-green-200">
+          <li>Executive summary</li>
+          <li>Technical findings</li>
+          <li>Remediation steps</li>
+        </ul>
+      </details>
     </div>
   </section>
 
   <!-- PRICING -->
   <section id="pricing" class="py-12 bg-gray-900 px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-4xl">
-      <h2 class="text-2xl font-bold neon mb-6 text-center">Pricing</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <div class="border border-green-800 rounded-lg p-6 hover:bg-gray-800 transition">
-          <h3 class="text-xl font-semibold mb-2">Mini Audit</h3>
-          <p class="font-bold">£99</p>
-          <p>Quick recon + essentials summary</p>
-        </div>
-        <div class="border border-green-800 rounded-lg p-6 hover:bg-gray-800 transition">
-          <h3 class="text-xl font-semibold mb-2">Full Audit</h3>
-          <p class="font-bold">£299</p>
-          <p>Complete checklist, recon, & detailed report</p>
-        </div>
-        <div class="border border-green-800 rounded-lg p-6 hover:bg-gray-800 transition">
-          <h3 class="text-xl font-semibold mb-2">Custom Support</h3>
-          <p class="font-bold">£499+</p>
-          <p>Personalized help + live secure session</p>
-        </div>
-      </div>
+    <div class="mx-auto max-w-4xl space-y-6">
+      <h2 class="text-2xl font-bold animated-text text-center">Pricing</h2>
+
+      <details>
+        <summary>
+          <span>🛠️ Mini Audit — £99</span>
+          <span class="arrow">⯆</span>
+        </summary>
+        <p class="mt-2 text-green-200">
+          Quick recon + essentials summary.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          <span>🔍 Full Audit — £299</span>
+          <span class="arrow">⯆</span>
+        </summary>
+        <p class="mt-2 text-green-200">
+          Complete checklist, recon, & detailed report.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          <span>🤝 Custom Support — £499+</span>
+          <span class="arrow">⯆</span>
+        </summary>
+        <p class="mt-2 text-green-200">
+          Personalized help + secure live session.
+        </p>
+      </details>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="py-12 px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-md text-center">
-      <h2 class="text-2xl font-bold neon mb-4">Contact &amp; Bookings</h2>
+      <h2 class="text-2xl font-bold animated-text mb-4">Contact &amp; Bookings</h2>
       <p class="mb-6">
         <a href="mailto:jxnesyy.cybersafe@gmail.com" class="underline hover:text-green-200">
           jxnesyy.cybersafe@gmail.com
