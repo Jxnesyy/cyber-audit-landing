@@ -9,179 +9,241 @@
     rel="stylesheet"
   />
   <style>
-    /* tone-down neon glow for headings */
-    .glow {
-      text-shadow:
-        0 0 4px rgba(34,197,94,0.7),
-        0 0 8px rgba(34,197,94,0.5);
+    body {
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+    }
+    .hero-bg {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/1600x900/?cybersecurity,hacker') center/cover no-repeat;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+    details summary::-webkit-details-marker {
+      display: none;
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-black to-gray-900 text-green-600 font-mono antialiased">
+<body class="text-green-300 font-mono antialiased">
 
   <!-- HERO -->
-  <header class="py-16 text-center px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-xl">
-      <svg class="w-16 h-16 mx-auto mb-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          d="M12 1l8 4v6c0 6-4 11-8 12-4-1-8-6-8-12V5l8-4z"/>
-      </svg>
-      <h1 class="text-4xl sm:text-5xl font-bold glow">Code of Jxnesyy</h1>
-      <p class="mt-4 text-lg sm:text-xl opacity-80">
-        I ethically hack your home so real threats never get the chance.
+  <header class="hero-bg h-screen flex items-center justify-center text-center px-6">
+    <div class="max-w-2xl">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4 animate-pulse">Code of Jxnesyy</h1>
+      <p class="text-lg md:text-xl mb-8 opacity-80">
+        “I ethically hack your home so real threats never get the chance.”
       </p>
-
-      <!-- Badges -->
-      <div class="flex justify-center space-x-2 mt-6">
-        <img src="https://img.shields.io/badge/Platform-Kali%20Linux-black?style=flat-square&logo=linux" alt="Platform: Kali Linux">
-        <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License: MIT">
-        <img src="https://img.shields.io/badge/Stage-Beta-orange?style=flat-square" alt="Stage: Beta">
-      </div>
-
-      <!-- CTAs -->
-      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+      <div class="space-x-4">
         <a href="#contact"
-           class="inline-block px-8 py-3 bg-green-700 hover:bg-green-800 rounded-md text-black font-semibold transition">
+           class="px-6 py-3 bg-green-700 hover:bg-green-800 rounded text-black font-semibold transition">
           Book Your Audit
         </a>
         <a href="https://github.com/Jxnesyy/cyber-audit-blueprint"
-           class="inline-block px-8 py-3 border border-green-700 rounded-md text-green-300 hover:bg-green-800 transition">
+           class="px-6 py-3 border border-green-700 rounded hover:bg-green-800 transition">
           View Full Framework
         </a>
       </div>
     </div>
   </header>
 
-  <!-- SERVICES -->
-  <section id="services" class="py-12 px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-4xl space-y-6">
-      <h2 class="text-2xl font-bold glow text-center">Services Offered</h2>
-      <details class="border border-green-600 rounded-lg p-6">
-        <summary class="cursor-pointer flex justify-between items-center">
-          <span>🔍 Smart Home Audit</span><span>⯆</span>
-        </summary>
-        <p class="mt-2 text-green-200">Deep scan of IoT devices, router vulnerabilities, and hidden exposures.</p>
-      </details>
-      <!-- ... other services ... -->
+  <!-- SECTION: Services -->
+  <section id="services" class="py-16 px-6 lg:px-20">
+    <h2 class="text-3xl font-bold text-center mb-12">Services Offered</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-gray-800 p-6 rounded-lg card-hover transition-transform">
+        <h3 class="text-xl font-semibold mb-2">Smart Home Audit</h3>
+        <p class="mb-4 opacity-80">Deep scan of IoT, routers & hidden exposures.</p>
+        <details class="text-green-200">
+          <summary class="cursor-pointer font-medium">Learn More</summary>
+          <ul class="mt-2 list-disc list-inside">
+            <li>Device fingerprinting</li>
+            <li>Default credential checks</li>
+            <li>Open ports & services</li>
+          </ul>
+        </details>
+      </div>
+      <!-- Card 2 -->
+      <div class="bg-gray-800 p-6 rounded-lg card-hover transition-transform">
+        <h3 class="text-xl font-semibold mb-2">Home Office Audit</h3>
+        <p class="mb-4 opacity-80">Harden desktops, laptops & networks.</p>
+        <details class="text-green-200">
+          <summary class="cursor-pointer font-medium">Learn More</summary>
+          <ul class="mt-2 list-disc list-inside">
+            <li>Email phishing simulation</li>
+            <li>Patch & antivirus review</li>
+            <li>VPN & proxy validation</li>
+          </ul>
+        </details>
+      </div>
+      <!-- Card 3 -->
+      <div class="bg-gray-800 p-6 rounded-lg card-hover transition-transform">
+        <h3 class="text-xl font-semibold mb-2">Child Device Safety</h3>
+        <p class="mb-4 opacity-80">Protect your kids from online threats.</p>
+        <details class="text-green-200">
+          <summary class="cursor-pointer font-medium">Learn More</summary>
+          <ul class="mt-2 list-disc list-inside">
+            <li>Parental control audit</li>
+            <li>App permission review</li>
+            <li>Safe browsing setup</li>
+          </ul>
+        </details>
+      </div>
+      <!-- Card 4 -->
+      <div class="bg-gray-800 p-6 rounded-lg card-hover transition-transform">
+        <h3 class="text-xl font-semibold mb-2">Ethical Hacking Report</h3>
+        <p class="mb-4 opacity-80">Prioritized fixes + optional video walkthrough.</p>
+        <details class="text-green-200">
+          <summary class="cursor-pointer font-medium">Learn More</summary>
+          <ul class="mt-2 list-disc list-inside">
+            <li>Executive summary</li>
+            <li>Technical findings</li>
+            <li>Remediation steps</li>
+          </ul>
+        </details>
+      </div>
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section id="pricing" class="py-12 bg-gray-900 px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-4xl space-y-6">
-      <h2 class="text-2xl font-bold glow text-center">Pricing</h2>
-      <details class="border border-green-600 rounded-lg p-6">
-        <summary class="cursor-pointer flex justify-between items-center">
-          <span>🛠️ Mini Audit — £99</span><span>⯆</span>
-        </summary>
-        <p class="mt-2 text-green-200">Quick recon + essentials summary.</p>
-      </details>
-      <!-- ... other pricing options ... -->
+  <!-- SECTION: Pricing -->
+  <section id="pricing" class="py-16 px-6 lg:px-20 bg-gray-900">
+    <h2 class="text-3xl font-bold text-center mb-12">Pricing Plans</h2>
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Plan A -->
+      <div class="bg-gray-800 p-6 rounded-lg text-center card-hover transition-transform">
+        <h3 class="text-2xl font-semibold mb-4">Mini Audit</h3>
+        <p class="text-4xl font-bold mb-4">£99</p>
+        <p class="mb-6 opacity-80">Quick recon & essentials summary.</p>
+        <a href="#contact" class="inline-block px-4 py-2 bg-green-700 hover:bg-green-800 rounded text-black font-medium transition">
+          Select
+        </a>
+      </div>
+      <!-- Plan B -->
+      <div class="bg-gray-800 p-6 rounded-lg text-center card-hover transition-transform">
+        <h3 class="text-2xl font-semibold mb-4">Full Audit</h3>
+        <p class="text-4xl font-bold mb-4">£299</p>
+        <p class="mb-6 opacity-80">Complete checklist, recon & report.</p>
+        <a href="#contact" class="inline-block px-4 py-2 bg-green-700 hover:bg-green-800 rounded text-black font-medium transition">
+          Select
+        </a>
+      </div>
+      <!-- Plan C -->
+      <div class="bg-gray-800 p-6 rounded-lg text-center card-hover transition-transform">
+        <h3 class="text-2xl font-semibold mb-4">Custom Support</h3>
+        <p class="text-4xl font-bold mb-4">£499+</p>
+        <p class="mb-6 opacity-80">Personalized help & secure live session.</p>
+        <a href="#contact" class="inline-block px-4 py-2 bg-green-700 hover:bg-green-800 rounded text-black font-medium transition">
+          Select
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- FRAMEWORK HIGHLIGHTS -->
-  <section id="framework" class="py-12 px-4 sm:px-6 lg:px-8 bg-black">
-    <div class="mx-auto max-w-3xl text-center">
-      <h2 class="text-2xl font-bold glow mb-6">Why Code of Jxnesyy?</h2>
-      <ul class="list-disc list-inside text-green-200 space-y-2">
-        <li><strong>Checklists:</strong> Step-by-step guides for each audit phase.</li>
-        <li><strong>Scripts:</strong> Automated recon, scanning, and reporting tools.</li>
-        <li><strong>Reports:</strong> Templates for clear, actionable deliverables.</li>
-        <li><strong>Documentation:</strong> In-depth philosophy and operational playbooks.</li>
-      </ul>
-    </div>
+  <!-- SECTION: Why It Matters -->
+  <section id="why" class="py-16 px-6 lg:px-20">
+    <h2 class="text-3xl font-bold text-center mb-8">Why “Code of Jxnesyy” Matters</h2>
+    <p class="max-w-3xl mx-auto mb-6 opacity-80 text-center">
+      Every day, exploits evolve. From zero-click iPhone hacks to AI-powered deepfakes, attackers are growing smarter —  
+      but your defenses can be smarter still.  
+    </p>
+    <ul class="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <li class="bg-gray-800 p-4 rounded-lg flex items-start">
+        <span class="text-2xl mr-3">⚠️</span>
+        <div>
+          <h4 class="font-semibold mb-1">Operation Sindoor</h4>
+          <p class="opacity-80 text-sm">June 2025: Attacks on India’s power grid nearly shut down the nation.</p>
+        </div>
+      </li>
+      <li class="bg-gray-800 p-4 rounded-lg flex items-start">
+        <span class="text-2xl mr-3">📱</span>
+        <div>
+          <h4 class="font-semibold mb-1">iPhone Zero-Click</h4>
+          <p class="opacity-80 text-sm">May 2025: Hidden exploits bypass security without any user interaction.</p>
+        </div>
+      </li>
+      <li class="bg-gray-800 p-4 rounded-lg flex items-start">
+        <span class="text-2xl mr-3">💾</span>
+        <div>
+          <h4 class="font-semibold mb-1">Bank Sepah Breach</h4>
+          <p class="opacity-80 text-sm">March 2025: 42M records stolen — customer identities exposed.</p>
+        </div>
+      </li>
+      <li class="bg-gray-800 p-4 rounded-lg flex items-start">
+        <span class="text-2xl mr-3">🔒</span>
+        <div>
+          <h4 class="font-semibold mb-1">M&amp;S Ransomware</h4>
+          <p class="opacity-80 text-sm">May 2025: Retail giant held hostage; systems frozen, trust shattered.</p>
+        </div>
+      </li>
+    </ul>
   </section>
 
-  <!-- THREAT SPOTLIGHT -->
-  <section id="threats" class="py-12 px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-3xl">
-      <h2 class="text-2xl font-bold glow mb-4">Threat Spotlight: Recent Cyberattacks</h2>
-      <ul class="list-disc list-inside text-green-200 space-y-2">
-        <li><strong>Operation Sindoor (June 2025):</strong> India thwarts over 200,000 attacks on its power grid sources close to national collapse.</li>
-        <li><strong>iPhone Zero-Click Campaign (May 2025):</strong> Foreign actors exploit unpatched vulnerabilities to infiltrate high-value targets’ smartphones.</li>
-        <li><strong>Bank Sepah Data Breach (March 2025):</strong> 42 million records stolen, exposing customer identities and finances.</li>
-        <li><strong>M&S Ransomware Siege (May 2025):</strong> UK retail titan held hostage by DragonForce gang—systems frozen, trust shattered.</li>
-      </ul>
-    </div>
-  </section>
+  <!-- SECTION: Tactics & Hygiene -->
+  <section id="tactics-hygiene" class="py-16 px-6 lg:px-20 bg-gray-900">
+    <div class="max-w-4xl mx-auto space-y-10">
+      <!-- Social Engineering Tactics -->
+      <div>
+        <h3 class="text-2xl font-bold mb-4 text-center">Up-to-Date Tactics & Social Engineering</h3>
+        <details class="bg-gray-800 p-6 rounded-lg">
+          <summary class="cursor-pointer font-medium">View Tactics</summary>
+          <ul class="mt-4 list-disc list-inside text-green-200 space-y-2">
+            <li><strong>BEC:</strong> CEO fraud & fake invoices.</li>
+            <li><strong>Vishing & SMiShing:</strong> Voice-spoofed calls & malicious SMS.</li>
+            <li><strong>Deepfakes:</strong> AI-powered executive impersonation.</li>
+            <li><strong>Social Media Recon:</strong> Mapping your life, then striking.</li>
+          </ul>
+        </details>
+      </div>
 
-  <!-- TACTICS & SOCIAL ENGINEERING -->
-  <section id="tactics" class="py-12 bg-gray-900 px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-3xl">
-      <h2 class="text-2xl font-bold glow mb-4">Up-to-Date Tactics &amp; Social Engineering</h2>
-      <p class="text-green-200 mb-4">
-        Attackers don’t just break firewalls—they break people. Here’s what they’re using right now:
-      </p>
-      <ul class="list-disc list-inside text-green-200 space-y-2">
-        <li><strong>Business Email Compromise (BEC):</strong> High-value invoices, fake CEOs, millions lost.</li>
-        <li><strong>Vishing &amp; SMiShing:</strong> Voice-spoofed calls and malicious SMS lure victims into traps.</li>
-        <li><strong>Deepfake Avatars:</strong> AI-generated voices impersonate executives for instant trust.</li>
-        <li><strong>Social Media Recon:</strong> Attackers gather every scrap of your digital life—then they strike.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- CYBER HYGIENE -->
-  <section id="hygiene" class="py-12 px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-3xl">
-      <h2 class="text-2xl font-bold glow mb-4">Cyber Hygiene: Your Digital Lifeline</h2>
-      <p class="text-green-200 mb-4">
-        Neglect weak passwords and you invite disaster. Unpatched devices are ticking time-bombs. Stay alive online with these essentials:
-      </p>
-      <ul class="list-disc list-inside text-green-200 space-y-2">
-        <li><strong>Unique, Long Passwords:</strong> A single crack can expose everything.</li>
-        <li><strong>Multi-Factor Authentication:</strong> Your last line of defense against credential theft.</li>
-        <li><strong>Regular Patching:</strong> Hackers exploit yesterday’s holes—patch today.</li>
-        <li><strong>Encrypted Backups:</strong> Ransomware can’t hold you hostage if you own the keys.</li>
-        <li><strong>Security Awareness:</strong> One click on a bad link can end your digital life.</li>
-      </ul>
+      <!-- Cyber Hygiene Essentials -->
+      <div>
+        <h3 class="text-2xl font-bold mb-4 text-center">Cyber Hygiene Essentials</h3>
+        <details class="bg-gray-800 p-6 rounded-lg">
+          <summary class="cursor-pointer font-medium">View Essentials</summary>
+          <ul class="mt-4 list-disc list-inside text-green-200 space-y-2">
+            <li><strong>Unique Passwords:</strong> One crack shouldn’t open all doors.</li>
+            <li><strong>MFA:</strong> Your final defense line.</li>
+            <li><strong>Patching:</strong> Today’s update fixes yesterday’s hole.</li>
+            <li><strong>Encrypted Backups:</strong> Ransomware can’t hold you hostage.</li>
+            <li><strong>Awareness:</strong> One click can end your digital life.</li>
+          </ul>
+        </details>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-12 px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-md text-center">
-      <h2 class="text-2xl font-bold glow mb-4">Contact &amp; Bookings</h2>
-      <p class="mb-6">
-        <a href="mailto:jxnesyy.cybersafe@gmail.com" class="underline hover:text-green-300">
-          jxnesyy.cybersafe@gmail.com
-        </a>
+  <section id="contact" class="py-16 px-6 lg:px-20">
+    <div class="max-w-md mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+      <p class="mb-6 opacity-80">
+        Ready to lock down your digital world? Drop me a line.
       </p>
       <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
         <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
+          type="text" name="name" placeholder="Your Name" required
           class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-green-700"
         />
         <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          required
+          type="email" name="email" placeholder="Your Email" required
           class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-green-700"
         />
         <textarea
-          name="message"
-          rows="4"
-          placeholder="Tell me your situation"
-          required
+          name="message" rows="4" placeholder="Your Message" required
           class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-green-700"
         ></textarea>
         <button
           type="submit"
           class="w-full py-3 bg-green-700 hover:bg-green-800 rounded text-black font-semibold transition"
         >
-          Submit
+          Send Message
         </button>
       </form>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-6 text-center text-sm text-gray-500">
+  <footer class="py-8 text-center text-sm text-gray-500">
     © 2025 Jxnesyy — Built with 💻 & 🔒 | Ethical Hacker’s Toolkit<br/>
     Powered by the <a href="https://github.com/Jxnesyy/cyber-audit-blueprint" class="underline hover:text-green-300">Code of Jxnesyy Blueprint</a>
   </footer>
