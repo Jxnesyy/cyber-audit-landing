@@ -5,70 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cyber Audit by Jxnesyy</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: radial-gradient(circle at top left, #0f0f0f, #000000);
+      font-family: 'Courier New', monospace;
+    }
+    .hacker-glow {
+      text-shadow: 0 0 10px #00ffae, 0 0 20px #00ffae, 0 0 30px #00ffae;
+    }
+    .hacker-box {
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid #00ffae44;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white">
-  <header class="text-center py-10">
-    <h1 class="text-4xl font-bold">🛡️ Cyber Audit by Jxnesyy</h1>
-    <p class="mt-2 text-gray-400">I test your home like a hacker — so real ones can't.</p>
-    <a href="#contact" class="mt-4 inline-block px-6 py-2 bg-indigo-600 rounded hover:bg-indigo-700">Book Your Audit</a>
+<body class="text-green-400">
+  <header class="text-center py-12">
+    <h1 class="text-5xl font-bold hacker-glow">🛡️ Cyber Audit by Jxnesyy</h1>
+    <p class="mt-4 text-green-300">I ethically hack your home so real threats can’t.</p>
+    <a href="#contact" class="mt-6 inline-block px-8 py-3 bg-green-600 text-black font-bold rounded hover:bg-green-700 transition">📥 Book Your Audit</a>
   </header>
 
-  <section class="max-w-4xl mx-auto py-10 px-4">
-    <h2 class="text-2xl font-semibold mb-4">What I Offer</h2>
-    <div class="space-y-6">
-      <div>
-        <h3 class="text-xl font-semibold">🔍 Smart Home Audit</h3>
-        <p class="text-gray-300">Audit your IoT devices, router, and network for hidden risks.</p>
+  <section class="max-w-5xl mx-auto py-12 px-6">
+    <h2 class="text-3xl font-bold mb-6 hacker-glow">🧰 Services Offered</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="p-6 rounded-lg hacker-box">
+        <h3 class="text-2xl font-semibold">🔍 Smart Home Audit</h3>
+        <p class="mt-2">Deep scan of all IoT devices, router vulnerabilities, and hidden exposures.</p>
       </div>
-      <div>
-        <h3 class="text-xl font-semibold">💻 Home Office Audit</h3>
-        <p class="text-gray-300">Secure your laptop, mobile, and personal files from online threats.</p>
+      <div class="p-6 rounded-lg hacker-box">
+        <h3 class="text-2xl font-semibold">💻 Home Office Audit</h3>
+        <p class="mt-2">Hardens devices and networks against phishing, malware, and intrusion.</p>
       </div>
-      <div>
-        <h3 class="text-xl font-semibold">🧒 Child Safety Assessment</h3>
-        <p class="text-gray-300">Help protect your children’s devices and online behavior.</p>
+      <div class="p-6 rounded-lg hacker-box">
+        <h3 class="text-2xl font-semibold">🧒 Child Device Safety</h3>
+        <p class="mt-2">Helps parents protect their kids from online threats and rogue apps.</p>
       </div>
-      <div>
-        <h3 class="text-xl font-semibold">📄 Full Cybersecurity Report</h3>
-        <p class="text-gray-300">Receive a tailored PDF report with key fixes and improvements.</p>
+      <div class="p-6 rounded-lg hacker-box">
+        <h3 class="text-2xl font-semibold">📄 Ethical Hacking Report</h3>
+        <p class="mt-2">PDF blueprint with prioritized fixes and optional video walkthrough.</p>
       </div>
     </div>
   </section>
 
-  <section class="bg-gray-800 py-10">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-2xl font-semibold mb-4 text-center">💰 Pricing</h2>
+  <section class="py-12 bg-black border-t border-green-500">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-6 hacker-glow">💰 Pricing</h2>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gray-700 p-6 rounded-lg">
+        <div class="p-6 rounded-lg hacker-box">
           <h3 class="text-xl font-bold mb-2">Mini Audit</h3>
-          <p class="text-gray-300">£99 - Quick scan + findings summary</p>
+          <p>£99 - Quick recon and essentials summary</p>
         </div>
-        <div class="bg-indigo-700 p-6 rounded-lg">
+        <div class="p-6 rounded-lg hacker-box border border-green-500">
           <h3 class="text-xl font-bold mb-2">Full Audit</h3>
-          <p class="text-gray-200">£299 - Full checklist + PDF report</p>
+          <p>£299 - Full checklist, recon, and detailed report</p>
         </div>
-        <div class="bg-gray-700 p-6 rounded-lg">
+        <div class="p-6 rounded-lg hacker-box">
           <h3 class="text-xl font-bold mb-2">Custom Support</h3>
-          <p class="text-gray-300">£499+ - Includes report, fixes & training</p>
+          <p>£499+ - Personalized help + secure live session</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="py-10 px-4 max-w-2xl mx-auto">
-    <h2 class="text-2xl font-semibold text-center mb-4">📥 Contact / Book Now</h2>
-    <p class="text-center text-gray-400 mb-6">Email: <a href="mailto:your-email@example.com" class="text-indigo-400 underline">your-email@example.com</a><br>
-    or fill out the form below:</p>
+  <section id="contact" class="py-12 px-6 max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-4 hacker-glow">📬 Contact & Bookings</h2>
+    <p class="text-center text-green-300 mb-6">Email: <a href="mailto:jxnesyy.cybersafe@gmail.com" class="underline">jxnesyy.cybersafe@gmail.com</a><br>
+    or use the secure form below:</p>
     <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
-      <input type="text" name="name" placeholder="Your Name" class="w-full p-2 bg-gray-700 rounded" required>
-      <input type="email" name="email" placeholder="Your Email" class="w-full p-2 bg-gray-700 rounded" required>
-      <textarea name="message" placeholder="Your Message" class="w-full p-2 bg-gray-700 rounded h-32" required></textarea>
-      <button type="submit" class="bg-indigo-600 px-6 py-2 rounded hover:bg-indigo-700">Send Message</button>
+      <input type="text" name="name" placeholder="Your Name" class="w-full p-3 bg-gray-800 text-green-200 rounded" required>
+      <input type="email" name="email" placeholder="Your Email" class="w-full p-3 bg-gray-800 text-green-200 rounded" required>
+      <textarea name="message" placeholder="Tell me your situation" class="w-full p-3 bg-gray-800 text-green-200 rounded h-32" required></textarea>
+      <button type="submit" class="bg-green-600 px-6 py-2 rounded font-bold hover:bg-green-700">Submit</button>
     </form>
   </section>
 
-  <footer class="text-center text-gray-500 text-sm py-6">
-    &copy; 2025 Jxnesyy. All rights reserved.
+  <footer class="text-center text-green-400 text-sm py-8">
+    &copy; 2025 Jxnesyy — Built with 💻 and 🔐 | Ethical Hacker’s Toolkit
   </footer>
 </body>
 </html>
