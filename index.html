@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Code of Jxnesyy — Ethical Hacker’s Toolkit</title>
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
@@ -13,154 +12,120 @@
     .hero-bg {
       background: url('https://source.unsplash.com/1600x900/?cybersecurity') center/cover no-repeat;
       background-blend-mode: multiply;
-      background-color: rgba(0,0,0,0.7);
-    }
-    details summary::-webkit-details-marker {
-      display: none;
+      background-color: rgba(0, 0, 0, 0.7);
     }
     .card-hover:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+      transform: translateY(-3px);
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    summary::-webkit-details-marker {
+      display: none;
     }
   </style>
 </head>
 <body class="text-green-300 font-mono antialiased">
 
   <!-- HERO -->
-  <header class="hero-bg py-8 text-center px-4 sm:px-6 lg:px-8">
-    <h1 class="text-4xl sm:text-5xl font-bold mb-2">Code of Jxnesyy</h1>
-    <p class="text-base sm:text-lg opacity-80 mb-4">
-      We ethically hack your home so real threats can’t.
-    </p>
+  <header class="hero-bg py-10 text-center px-4 sm:px-6 lg:px-8">
+    <h1 class="text-5xl font-bold mb-3 tracking-tight">Code of Jxnesyy</h1>
+    <p class="text-lg opacity-80 mb-6">We ethically hack your home so real threats can’t.</p>
     <div class="space-x-3">
-      <a href="#contact"
-         class="px-4 py-2 bg-green-700 hover:bg-green-800 rounded text-black font-semibold transition">
-        Book Your Audit
-      </a>
-      <a href="https://github.com/Jxnesyy/cyber-audit-blueprint"
-         class="px-4 py-2 border border-green-700 rounded hover:bg-gray-800 transition">
-        View Toolkit
-      </a>
+      <a href="#contact" class="px-5 py-2 bg-green-600 hover:bg-green-700 rounded text-black font-semibold transition">Book Your Audit</a>
+      <a href="https://github.com/Jxnesyy/cyber-audit-blueprint" class="px-5 py-2 border border-green-600 hover:bg-gray-800 rounded transition">View Toolkit</a>
     </div>
   </header>
 
   <!-- RECENT CYBERATTACKS -->
-  <section id="threat" class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
-    <h2 class="text-2xl font-bold text-center text-red-500 mb-6">🚨 Recent Cyberattacks</h2>
+  <section id="threat" class="py-12 px-6 bg-gray-900">
+    <h2 class="text-3xl font-bold text-red-500 text-center mb-8">🚨 Recent Cyberattacks</h2>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
+      <details class="bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 card-hover">
         <summary class="cursor-pointer font-semibold">⚡ Operation Sindoor</summary>
-        <p class="mt-2 text-sm opacity-80">
-          <strong>June 2025:</strong> 200 000+ intrusion attempts on India’s power grid.<br/>
-          <strong>Lesson:</strong> Segment critical systems & enable real-time alerts.
-        </p>
+        <p class="mt-2 text-sm opacity-80">💥 200,000+ intrusion attempts on India’s power grid.<br/><strong>Lesson:</strong> Segment systems, use real-time alerts.</p>
       </details>
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
+      <details class="bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 card-hover">
         <summary class="cursor-pointer font-semibold">📱 iPhone Zero-Click</summary>
-        <p class="mt-2 text-sm opacity-80">
-          <strong>May 2025:</strong> Phones hijacked without any user action.<br/>
-          <strong>Lesson:</strong> Always apply the latest OS & security patches.
-        </p>
+        <p class="mt-2 text-sm opacity-80">📡 Hijacked phones, no user interaction.<br/><strong>Lesson:</strong> Patch constantly.</p>
       </details>
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
+      <details class="bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 card-hover">
         <summary class="cursor-pointer font-semibold">💾 Bank Sepah Breach</summary>
-        <p class="mt-2 text-sm opacity-80">
-          <strong>Mar 2025:</strong> 42 million customer records stolen.<br/>
-          <strong>Lesson:</strong> Encrypt data at rest & enforce zero-trust access.
-        </p>
+        <p class="mt-2 text-sm opacity-80">📉 42M customer records leaked.<br/><strong>Lesson:</strong> Encrypt & enforce zero-trust.</p>
       </details>
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
+      <details class="bg-gray-800 p-4 rounded-lg border-l-4 border-red-500 card-hover">
         <summary class="cursor-pointer font-semibold">🔒 M&S Ransomware</summary>
-        <p class="mt-2 text-sm opacity-80">
-          <strong>May 2025:</strong> Retail systems locked for days.<br/>
-          <strong>Lesson:</strong> Maintain offline backups & rehearse recovery.
-        </p>
+        <p class="mt-2 text-sm opacity-80">🔐 Systems locked for days.<br/><strong>Lesson:</strong> Backup + disaster drills.</p>
       </details>
     </div>
-    <div class="text-center mt-4">
-      <a href="#why" class="underline hover:text-white">Why this matters ↓</a>
+    <div class="text-center mt-6">
+      <a href="#why" class="text-green-300 underline hover:text-white text-sm">Why this matters ↓</a>
     </div>
   </section>
 
   <!-- WHY CODE OF JXNESYY -->
-  <section id="why" class="py-12 px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl font-bold text-center text-green-300 mb-6">Why Code of Jxnesyy?</h2>
+  <section id="why" class="py-12 px-6">
+    <h2 class="text-3xl font-bold text-center text-green-300 mb-8">Why Code of Jxnesyy?</h2>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-green-600">
+      <details class="bg-gray-800 p-4 rounded-lg border border-green-600 card-hover">
         <summary class="cursor-pointer font-semibold text-green-300">📝 Checklists</summary>
-        <p class="mt-2 text-sm opacity-80">
-          Step-by-step guides for every audit phase—no jargon.
-        </p>
+        <p class="mt-2 text-sm opacity-80">No jargon—just clear step-by-step guidance.</p>
       </details>
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-green-600">
+      <details class="bg-gray-800 p-4 rounded-lg border border-green-600 card-hover">
         <summary class="cursor-pointer font-semibold text-green-300">⚙️ Automations</summary>
-        <p class="mt-2 text-sm opacity-80">
-          Simple scripts to scan, report, and secure—run with one command.
-        </p>
+        <p class="mt-2 text-sm opacity-80">Scripts that work fast—scan, secure, report.</p>
       </details>
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-green-600">
+      <details class="bg-gray-800 p-4 rounded-lg border border-green-600 card-hover">
         <summary class="cursor-pointer font-semibold text-green-300">📊 Reports</summary>
-        <p class="mt-2 text-sm opacity-80">
-          Clear, actionable summaries—no guesswork.
-        </p>
+        <p class="mt-2 text-sm opacity-80">Understand your risks, clearly laid out.</p>
       </details>
-      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-green-600">
+      <details class="bg-gray-800 p-4 rounded-lg border border-green-600 card-hover">
         <summary class="cursor-pointer font-semibold text-green-300">📚 Support</summary>
-        <p class="mt-2 text-sm opacity-80">
-          We explain every step in plain English.
-        </p>
+        <p class="mt-2 text-sm opacity-80">Plain English help—no geek speak.</p>
       </details>
     </div>
   </section>
 
-  <!-- SERVICES & PRICING -->
-  <section id="offerings" class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+  <!-- SERVICES -->
+  <section id="offerings" class="py-12 px-6 bg-gray-900">
     <div class="max-w-3xl mx-auto space-y-6 text-green-200">
       <details class="bg-gray-800 p-4 rounded-lg card-hover border border-green-600">
-        <summary class="cursor-pointer font-semibold text-green-300">Our Services</summary>
-        <ul class="mt-3 list-disc list-inside space-y-1 text-sm">
-          <li><strong>Home Network Scan:</strong> Find & fix vulnerabilities.</li>
-          <li><strong>Device Hardening:</strong> Secure computers & routers.</li>
-          <li><strong>Online Safety:</strong> Protect kids & guests.</li>
-          <li><strong>Video Report:</strong> Easy action plan & walkthrough.</li>
+        <summary class="cursor-pointer font-semibold text-green-300">🛠️ Services</summary>
+        <ul class="mt-3 list-disc list-inside text-sm space-y-1">
+          <li>🔍 Network Scan: Find & fix weak points</li>
+          <li>🛡️ Device Hardening: Lock down endpoints</li>
+          <li>👨‍👩‍👧‍👦 Online Safety: Protect your kids & guests</li>
+          <li>🎥 Video Report: Watch your audit explained</li>
         </ul>
       </details>
       <details class="bg-gray-800 p-4 rounded-lg card-hover border border-green-600">
-        <summary class="cursor-pointer font-semibold text-green-300">Pricing Plans</summary>
-        <ul class="mt-3 list-disc list-inside space-y-1 text-sm">
-          <li><strong>Mini Audit — £99:</strong> Quick overview & essentials.</li>
-          <li><strong>Full Audit — £299:</strong> Comprehensive scan & detailed report.</li>
-          <li><strong>Premium Support — £499+:</strong> Live session & Q&amp;A.</li>
+        <summary class="cursor-pointer font-semibold text-green-300">💸 Pricing</summary>
+        <ul class="mt-3 list-disc list-inside text-sm space-y-1">
+          <li>Mini Audit – <strong>£99</strong>: Essential scan</li>
+          <li>Full Audit – <strong>£299</strong>: Full review & report</li>
+          <li>Premium – <strong>£499+</strong>: Live 1-to-1 support</li>
         </ul>
       </details>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-12 px-4 sm:px-6 lg:px-8">
+  <section id="contact" class="py-12 px-6">
     <div class="max-w-md mx-auto text-center">
-      <h2 class="text-2xl font-bold text-green-300 mb-4">Get in Touch</h2>
-      <p class="mb-4 opacity-80">Ready to secure your home? Drop us a line.</p>
+      <h2 class="text-2xl font-bold text-green-300 mb-4">📬 Get in Touch</h2>
+      <p class="opacity-80 mb-4">Let’s lock down your digital life—ethically.</p>
       <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-3">
-        <input type="text" name="name" placeholder="Your Name" required
-               class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-green-600"/>
-        <input type="email" name="email" placeholder="Your Email" required
-               class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-green-600"/>
-        <textarea name="message" rows="3" placeholder="Your Message" required
-                  class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-green-600"></textarea>
-        <button type="submit"
-                class="w-full py-2 bg-green-700 hover:bg-green-800 rounded text-black font-semibold">
-          Send Message
-        </button>
+        <input name="name" placeholder="Your Name" required class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-green-600"/>
+        <input name="email" type="email" placeholder="Your Email" required class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-green-600"/>
+        <textarea name="message" rows="3" placeholder="Your Message" required class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-green-600"></textarea>
+        <button type="submit" class="w-full py-2 bg-green-600 hover:bg-green-700 rounded text-black font-semibold">Send Message</button>
       </form>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="py-6 text-center text-sm text-green-400 bg-gray-900">
-    © 2025 Jxnesyy — Simplifying cybersecurity for everyone<br/>
-    <a href="https://github.com/Jxnesyy/cyber-audit-blueprint"
-       class="underline hover:text-green-300">View our toolkit on GitHub</a>
+    © 2025 Jxnesyy — Hacking for good, legally & ethically<br/>
+    <a href="https://github.com/Jxnesyy/cyber-audit-blueprint" class="underline hover:text-green-300">GitHub Toolkit</a>
   </footer>
 
 </body>
