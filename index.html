@@ -1,39 +1,106 @@
-<script>
-  const output = document.getElementById('terminal-output');
-  const input = document.getElementById('cli-input');
-
-  function handleCommand() {
-    const command = input.value.trim();
-    let response = '';
-
-    switch (command) {
-      case 'help':
-        response = 'Available commands:\\n  run audit\\n  run scan\\n  simulate attack\\n  show report';
-        break;
-      case 'run audit':
-        response = 'Running full audit...\\n- Checking devices...\\n- Scanning network...\\n- Analyzing risks...\\n✔️ Audit complete! Use `show report` to view results.';
-        break;
-      case 'run scan':
-        response = 'Network scan in progress...\\nFound open ports: 22, 80, 443\\nServices detected: SSH, HTTP, HTTPS\\n✔️ Scan complete.';
-        break;
-      case 'simulate attack':
-        response = 'Launching simulated brute-force attack on test login...\\nTesting credentials...\\nAttempting password bypass...\\n⚠️ Simulation ended. No real harm done.';
-        break;
-      case 'show report':
-        response = 'Audit Summary:\\n- Devices: 6\\n- Vulnerabilities: 2 critical\\n- Recommendations: Update router firmware, disable remote access.\\n✅ Report saved to /reports/audit_summary.txt';
-        break;
-      default:
-        response = `Command not recognized: ${command}\\nType 'help' for available options.`;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code of Jxnesyy — Ethical Hacker’s Toolkit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 100%);
     }
-
-    output.textContent += `\\n$ ${command}\\n${response}`;
-    output.scrollTop = output.scrollHeight;
-    input.value = '';
-  }
-
-  input.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      handleCommand();
+    .card-hover:hover {
+      transform: translateY(-4px);
+      transition: all 0.3s ease;
+      box-shadow: 0 12px 24px rgba(0, 255, 170, 0.1);
     }
-  });
-</script>
+    summary::-webkit-details-marker {display:none}
+  </style>
+</head>
+<body class="text-green-300 font-sans antialiased">
+
+  <!-- HERO -->
+  <header class="py-16 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-b from-black to-gray-900">
+    <h1 class="text-5xl font-extrabold mb-4 text-green-400">Code of Jxnesyy</h1>
+    <p class="text-xl text-green-200 mb-6 max-w-2xl mx-auto">
+      Cybersecurity isn't just for companies. We ethically hack your home to defend your digital life against real threats.
+    </p>
+    <div class="space-x-4">
+      <a href="#contact" class="px-6 py-3 bg-green-500 hover:bg-green-600 text-black font-bold rounded transition">Book Your Audit</a>
+      <a href="https://github.com/Jxnesyy/cyber-audit-blueprint" class="px-6 py-3 border border-green-400 hover:bg-green-900 text-green-300 rounded transition">View Toolkit</a>
+    </div>
+  </header>
+
+  <!-- WHY THIS MATTERS -->
+  <section class="py-16 px-6 bg-gray-950 border-t border-gray-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-green-300 mb-4">Why This Matters</h2>
+      <p class="text-lg text-gray-300">Your smart home, phones, and laptops are all targets. We lock the digital doors before criminals find a way in.</p>
+    </div>
+  </section>
+
+  <!-- WHY CODE OF JXNESYY -->
+  <section id="why" class="py-20 px-6 bg-black border-t border-gray-700">
+    <h2 class="text-4xl font-bold text-green-300 text-center mb-12">Why Choose Jxnesyy?</h2>
+    <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+      <div class="flex items-start space-x-4"><div class="text-3xl">🏛️</div><div><h3 class="text-2xl font-semibold text-green-200">Compliance‑Backed</h3><p class="text-sm text-gray-300">Built on ISO 27001, NIST CSF & CIS Controls so your protection mirrors enterprise‑grade standards.</p></div></div>
+      <div class="flex items-start space-x-4"><div class="text-3xl">⚙️</div><div><h3 class="text-2xl font-semibold text-green-200">Automation Built‑In</h3><p class="text-sm text-gray-300">One‑click scripts scan, analyse, and recommend fixes—no deep tech skills required.</p></div></div>
+      <div class="flex items-start space-x-4"><div class="text-3xl">📊</div><div><h3 class="text-2xl font-semibold text-green-200">Clear Reporting</h3><p class="text-sm text-gray-300">Readable dashboards show risks and next steps for any user level.</p></div></div>
+      <div class="flex items-start space-x-4"><div class="text-3xl">🧾</div><div><h3 class="text-2xl font-semibold text-green-200">Checklist Ready</h3><p class="text-sm text-gray-300">Follow step‑by‑step guides to secure routers, tablets, consoles, and more.</p></div></div>
+      <div class="flex items-start space-x-4"><div class="text-3xl">👥</div><div><h3 class="text-2xl font-semibold text-green-200">Human Support</h3><p class="text-sm text-gray-300">Talk to a real consultant who explains fixes in everyday language.</p></div></div>
+      <div class="flex items-start space-x-4"><div class="text-3xl">♻️</div><div><h3 class="text-2xl font-semibold text-green-200">Ongoing Protection</h3><p class="text-sm text-gray-300">Quarterly re‑checks keep you ahead of emerging threats.</p></div></div>
+    </div>
+  </section>
+
+  <!-- CLI AUDIT SIMULATOR -->
+  <section id="cli-simulator" class="py-20 px-6 bg-black border-t border-gray-800">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-300 text-center mb-6">💻 Try the Audit CLI Simulator</h2>
+      <p class="text-center text-gray-400 mb-8">Type a command below and see our toolkit respond—just like a real terminal.</p>
+      <div class="bg-gray-900 border border-green-600 rounded-lg p-6">
+        <div id="terminal-output" class="h-64 overflow-y-auto font-mono text-sm text-green-300 bg-black p-4 mb-4 rounded border border-green-800 whitespace-pre-wrap">> Welcome to Jxnesyy Audit Toolkit v1.0
+> Type <code>help</code> to see available commands…</div>
+        <div class="flex items-center space-x-2">
+          <span class="text-green-400 select-none">$</span>
+          <input id="cli-input" type="text" placeholder="Type a command…" class="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 text-green-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"/>
+          <button onclick="handleCommand()" class="px-4 py-2 bg-green-600 hover:bg-green-700 text-black font-semibold rounded">Run</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const output = document.getElementById('terminal-output');
+      const input  = document.getElementById('cli-input');
+
+      function write(text){
+        output.textContent += `\n${text}`;
+        output.scrollTop = output.scrollHeight;
+      }
+
+      function handleCommand(){
+        const cmd = input.value.trim();
+        if(!cmd) return;
+        write(`$ ${cmd}`);
+
+        const responses = {
+          'help': `Available commands:\n  run audit\n  run scan\n  simulate attack\n  show report`,
+          'run audit': `Running full audit...\n- Checking devices...\n- Scanning network...\n- Analysing risks...\n✔️  Audit complete! Use 'show report' to view results.`,
+          'run scan': `Network scan in progress...\nFound open ports: 22, 80, 443\nServices detected: SSH, HTTP, HTTPS\n✔️  Scan complete.`,
+          'simulate attack': `Launching simulated brute-force attack on test login...\nTesting credentials...\nAttempting password bypass...\n⚠️  Simulation ended. No real harm done.`,
+          'show report': `Audit Summary:\n- Devices: 6\n- Vulnerabilities: 2 critical\n- Recommendations: Update router firmware, disable remote access.\n✅  Report saved to /reports/audit_summary.txt`
+        };
+
+        write(responses[cmd] || `Command not recognized: ${cmd}\nType 'help' for available commands.`);
+        input.value='';
+      }
+
+      input.addEventListener('keypress',e=>{if(e.key==='Enter')handleCommand()});
+    </script>
+  </section>
+
+  <!-- SERVICES & PRICING -->
+  <section id="offerings" class="py-20 px-6 bg-gray-900 border-t border-gray-800">
+    <h2 class="text-4xl font-bold text-green-300 text-center mb-12">Services & Pricing</h2>
+    <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto text-green-100">
+      <div class="bg-gray-800 border border-green-600 rounded-xl p-6 card-hover">
+        <h3 class
