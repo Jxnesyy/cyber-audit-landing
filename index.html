@@ -1,194 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Code of Jxnesyy — Your Home Cyber Shield</title>
-
-  <!-- Inter font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Code of Jxnesyy — Ethical Hacker’s Toolkit</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
     body {
-      @apply bg-gray-900 text-gray-200 font-sans;
+      background: linear-gradient(135deg, #000000 0%, #111827 100%);
     }
     .hero-bg {
-      background: url('https://source.unsplash.com/1600x900/?cybersecurity,network') center/cover no-repeat;
-      @apply bg-blend-overlay bg-black bg-opacity-70;
-    }
-    .card {
-      @apply bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow;
+      background: url('https://source.unsplash.com/1600x900/?cybersecurity') center/cover no-repeat;
+      background-blend-mode: multiply;
+      background-color: rgba(0,0,0,0.7);
     }
     details summary::-webkit-details-marker {
       display: none;
     }
+    .card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+    }
   </style>
 </head>
-<body class="antialiased">
-
-  <!-- NAVBAR -->
-  <nav class="bg-gray-800">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-xl font-bold text-cyan-400">Code of Jxnesyy</div>
-      <div class="space-x-6">
-        <a href="#threat" class="text-gray-300 hover:text-white">Threats</a>
-        <a href="#why" class="text-gray-300 hover:text-white">Why Us</a>
-        <a href="#offerings" class="text-gray-300 hover:text-white">Services</a>
-        <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
-      </div>
-    </div>
-  </nav>
+<body class="text-green-300 font-mono antialiased">
 
   <!-- HERO -->
-  <header id="hero" class="hero-bg py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Code of Jxnesyy</h1>
-      <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-        We test your home network so real hackers can’t.
-      </p>
-      <div class="flex justify-center space-x-4">
-        <a href="#contact" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-semibold">
-          Book Audit
-        </a>
-        <a href="https://github.com/Jxnesyy/cyber-audit-blueprint"
-           class="px-6 py-3 border border-cyan-500 text-cyan-500 hover:bg-gray-800 rounded-lg font-semibold">
-          View Toolkit
-        </a>
-      </div>
+  <header class="hero-bg py-8 text-center px-4 sm:px-6 lg:px-8">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-2">Code of Jxnesyy</h1>
+    <p class="text-base sm:text-lg opacity-80 mb-4">
+      We ethically hack your home so real threats can’t.
+    </p>
+    <div class="space-x-3">
+      <a href="#contact"
+         class="px-4 py-2 bg-green-700 hover:bg-green-800 rounded text-black font-semibold transition">
+        Book Your Audit
+      </a>
+      <a href="https://github.com/Jxnesyy/cyber-audit-blueprint"
+         class="px-4 py-2 border border-green-700 rounded hover:bg-gray-800 transition">
+        View Toolkit
+      </a>
     </div>
   </header>
 
   <!-- RECENT CYBERATTACKS -->
-  <section id="threat" class="py-16">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-semibold text-red-500 text-center mb-12">Recent Cyberattacks</h2>
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        <details class="card border-l-4 border-red-500 group">
-          <summary class="flex justify-between items-center cursor-pointer font-semibold text-white">
-            <span>⚡ Operation Sindoor</span>
-            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </summary>
-          <div class="mt-4 text-gray-300 text-sm space-y-1">
-            <p><strong>Date:</strong> June 2025</p>
-            <p><strong>What Happened:</strong> 200 000+ intrusion attempts against India’s power grid.</p>
-            <p><strong>Key Lesson:</strong> Segment critical systems & monitor in real time.</p>
-          </div>
-        </details>
-
-        <details class="card border-l-4 border-red-500 group">
-          <summary class="flex justify-between items-center cursor-pointer font-semibold text-white">
-            <span>📱 iPhone Zero-Click</span>
-            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </summary>
-          <div class="mt-4 text-gray-300 text-sm space-y-1">
-            <p><strong>Date:</strong> May 2025</p>
-            <p><strong>What Happened:</strong> Smartphones compromised without any user action.</p>
-            <p><strong>Key Lesson:</strong> Always apply the latest security updates.</p>
-          </div>
-        </details>
-
-        <details class="card border-l-4 border-red-500 group">
-          <summary class="flex justify-between items-center cursor-pointer font-semibold text-white">
-            <span>💾 Bank Sepah Breach</span>
-            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </summary>
-          <div class="mt-4 text-gray-300 text-sm space-y-1">
-            <p><strong>Date:</strong> March 2025</p>
-            <p><strong>What Happened:</strong> 42 million customer records stolen.</p>
-            <p><strong>Key Lesson:</strong> Encrypt data at rest & enforce strict access controls.</p>
-          </div>
-        </details>
-
-        <details class="card border-l-4 border-red-500 group">
-          <summary class="flex justify-between items-center cursor-pointer font-semibold text-white">
-            <span>🔒 M&S Ransomware</span>
-            <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </summary>
-          <div class="mt-4 text-gray-300 text-sm space-y-1">
-            <p><strong>Date:</strong> May 2025</p>
-            <p><strong>What Happened:</strong> Retail systems locked—operations halted for days.</p>
-            <p><strong>Key Lesson:</strong> Maintain offline backups & rehearse recovery plans.</p>
-          </div>
-        </details>
-      </div>
-      <div class="text-center mt-8">
-        <a href="#why" class="text-cyan-400 hover:text-white underline">Learn why it matters ↓</a>
-      </div>
+  <section id="threat" class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+    <h2 class="text-2xl font-bold text-center text-red-500 mb-6">🚨 Recent Cyberattacks</h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
+        <summary class="cursor-pointer font-semibold">⚡ Operation Sindoor</summary>
+        <p class="mt-2 text-sm opacity-80">
+          <strong>June 2025:</strong> 200 000+ intrusion attempts on India’s power grid.<br/>
+          <strong>Lesson:</strong> Segment critical systems & enable real-time alerts.
+        </p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
+        <summary class="cursor-pointer font-semibold">📱 iPhone Zero-Click</summary>
+        <p class="mt-2 text-sm opacity-80">
+          <strong>May 2025:</strong> Phones hijacked without any user action.<br/>
+          <strong>Lesson:</strong> Always apply the latest OS & security patches.
+        </p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
+        <summary class="cursor-pointer font-semibold">💾 Bank Sepah Breach</summary>
+        <p class="mt-2 text-sm opacity-80">
+          <strong>Mar 2025:</strong> 42 million customer records stolen.<br/>
+          <strong>Lesson:</strong> Encrypt data at rest & enforce zero-trust access.
+        </p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border-l-4 border-red-500">
+        <summary class="cursor-pointer font-semibold">🔒 M&S Ransomware</summary>
+        <p class="mt-2 text-sm opacity-80">
+          <strong>May 2025:</strong> Retail systems locked for days.<br/>
+          <strong>Lesson:</strong> Maintain offline backups & rehearse recovery.
+        </p>
+      </details>
+    </div>
+    <div class="text-center mt-4">
+      <a href="#why" class="underline hover:text-white">Why this matters ↓</a>
     </div>
   </section>
 
-  <!-- WHY US -->
-  <section id="why" class="py-16">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-semibold text-center text-cyan-400 mb-12">Why Choose Code of Jxnesyy?</h2>
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        <details class="card border border-cyan-500">
-          <summary class="cursor-pointer font-semibold text-cyan-300">Easy Checklists</summary>
-          <p class="mt-3 text-gray-300 text-sm">Step-by-step guides—no tech jargon.</p>
-        </details>
-        <details class="card border border-cyan-500">
-          <summary class="cursor-pointer font-semibold text-cyan-300">One-Click Scans</summary>
-          <p class="mt-3 text-gray-300 text-sm">Run powerful scans with a single click.</p>
-        </details>
-        <details class="card border border-cyan-500">
-          <summary class="cursor-pointer font-semibold text-cyan-300">Clear Reports</summary>
-          <p class="mt-3 text-gray-300 text-sm">Readable summaries with actionable steps.</p>
-        </details>
-        <details class="card border border-cyan-500">
-          <summary class="cursor-pointer font-semibold text-cyan-300">Friendly Support</summary>
-          <p class="mt-3 text-gray-300 text-sm">We explain everything in plain English.</p>
-        </details>
-      </div>
+  <!-- WHY CODE OF JXNESYY -->
+  <section id="why" class="py-12 px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold text-center text-green-300 mb-6">Why Code of Jxnesyy?</h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-green-600">
+        <summary class="cursor-pointer font-semibold text-green-300">📝 Checklists</summary>
+        <p class="mt-2 text-sm opacity-80">
+          Step-by-step guides for every audit phase—no jargon.
+        </p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-green-600">
+        <summary class="cursor-pointer font-semibold text-green-300">⚙️ Automations</summary>
+        <p class="mt-2 text-sm opacity-80">
+          Simple scripts to scan, report, and secure—run with one command.
+        </p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-green-600">
+        <summary class="cursor-pointer font-semibold text-green-300">📊 Reports</summary>
+        <p class="mt-2 text-sm opacity-80">
+          Clear, actionable summaries—no guesswork.
+        </p>
+      </details>
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-green-600">
+        <summary class="cursor-pointer font-semibold text-green-300">📚 Support</summary>
+        <p class="mt-2 text-sm opacity-80">
+          We explain every step in plain English.
+        </p>
+      </details>
     </div>
   </section>
 
   <!-- SERVICES & PRICING -->
-  <section id="offerings" class="py-16 bg-slate-900">
-    <div class="container mx-auto px-6 max-w-lg">
-      <details class="card border border-cyan-500 mb-6">
-        <summary class="cursor-pointer font-semibold text-cyan-300 text-lg">Our Services</summary>
-        <ul class="mt-4 list-disc list-inside space-y-2 text-sm text-gray-300">
-          <li><strong>Home Network Scan:</strong> Identify and fix vulnerabilities.</li>
-          <li><strong>Device Hardening:</strong> Secure your computers and routers.</li>
-          <li><strong>Kids’ Online Safety:</strong> Block unsafe content.</li>
-          <li><strong>Custom Report:</strong> Simple action plan & video walkthrough.</li>
+  <section id="offerings" class="py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+    <div class="max-w-3xl mx-auto space-y-6 text-green-200">
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-green-600">
+        <summary class="cursor-pointer font-semibold text-green-300">Our Services</summary>
+        <ul class="mt-3 list-disc list-inside space-y-1 text-sm">
+          <li><strong>Home Network Scan:</strong> Find & fix vulnerabilities.</li>
+          <li><strong>Device Hardening:</strong> Secure computers & routers.</li>
+          <li><strong>Online Safety:</strong> Protect kids & guests.</li>
+          <li><strong>Video Report:</strong> Easy action plan & walkthrough.</li>
         </ul>
       </details>
-      <details class="card border border-cyan-500">
-        <summary class="cursor-pointer font-semibold text-cyan-300 text-lg">Pricing Plans</summary>
-        <ul class="mt-4 list-disc list-inside space-y-2 text-sm text-gray-300">
+      <details class="bg-gray-800 p-4 rounded-lg card-hover border border-green-600">
+        <summary class="cursor-pointer font-semibold text-green-300">Pricing Plans</summary>
+        <ul class="mt-3 list-disc list-inside space-y-1 text-sm">
           <li><strong>Mini Audit — £99:</strong> Quick overview & essentials.</li>
-          <li><strong>Full Audit — £299:</strong> Complete scan & detailed report.</li>
-          <li><strong>Premium Support — £499+:</strong> Live walkthrough & Q&A.</li>
+          <li><strong>Full Audit — £299:</strong> Comprehensive scan & detailed report.</li>
+          <li><strong>Premium Support — £499+:</strong> Live session & Q&amp;A.</li>
         </ul>
       </details>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-16">
-    <div class="container mx-auto px-6 max-w-md text-center">
-      <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Get in Touch</h2>
-      <p class="mb-6 text-gray-300">Ready to secure your home? Send us a message:</p>
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-4">
+  <section id="contact" class="py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md mx-auto text-center">
+      <h2 class="text-2xl font-bold text-green-300 mb-4">Get in Touch</h2>
+      <p class="mb-4 opacity-80">Ready to secure your home? Drop us a line.</p>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-3">
         <input type="text" name="name" placeholder="Your Name" required
-               class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-sky-400 text-gray-100"/>
+               class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-green-600"/>
         <input type="email" name="email" placeholder="Your Email" required
-               class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-sky-400 text-gray-100"/>
+               class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-green-600"/>
         <textarea name="message" rows="3" placeholder="Your Message" required
-                  class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-sky-400 text-gray-100"></textarea>
+                  class="w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded focus:ring-2 focus:ring-green-600"></textarea>
         <button type="submit"
-                class="w-full py-3 bg-sky-600 hover:bg-sky-700 rounded text-white font-semibold">
+                class="w-full py-2 bg-green-700 hover:bg-green-800 rounded text-black font-semibold">
           Send Message
         </button>
       </form>
@@ -196,10 +157,10 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="py-8 bg-slate-900 text-center text-sm text-gray-500">
+  <footer class="py-6 text-center text-sm text-green-400 bg-gray-900">
     © 2025 Jxnesyy — Simplifying cybersecurity for everyone<br/>
     <a href="https://github.com/Jxnesyy/cyber-audit-blueprint"
-       class="underline text-sky-400 hover:text-white">View our toolkit on GitHub</a>
+       class="underline hover:text-green-300">View our toolkit on GitHub</a>
   </footer>
 
 </body>
