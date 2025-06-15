@@ -3,69 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CANxiety: Cyber Exposure Mission</title>
+  <title>CANxiety Cyber Audit Toolkit</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background-color: #0d0d0d;
-      color: #00ffcc;
-      font-family: 'Courier New', monospace;
-    }
-    .terminal-box {
-      background: #000;
-      border: 1px solid #00ffcc;
-      padding: 2rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 0 10px #00ffcc33;
-    }
-    .terminal-output span {
-      display: block;
-      line-height: 1.6;
+      background: linear-gradient(#0d0d0d, #1a1a1a);
+      color: #f0f0f0;
+      font-family: 'Segoe UI', sans-serif;
     }
   </style>
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen py-10 px-4">
-  <div class="terminal-box max-w-3xl w-full">
-    <div id="terminal" class="terminal-output text-green-300 text-sm"></div>
+<body class="font-sans leading-relaxed text-white">
+  <div class="max-w-6xl mx-auto px-4 py-10">
+    <header class="text-center space-y-6 mb-14">
+      <h1 class="text-4xl font-bold bg-gradient-to-r from-lime-400 via-green-400 to-emerald-500 bg-clip-text text-transparent">
+        CANxiety Cyber Audit Toolkit
+      </h1>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+        You don’t have to be fearless to be secure. Whether you’re a business owner, freelancer, parent or partner, CANxiety helps you protect what matters most — calmly, clearly, and confidently.
+      </p>
+      <div class="flex justify-center gap-4 pt-6">
+        <a href="#contact" class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-6 rounded transition">
+          🔐 Start My Audit
+        </a>
+        <a href="#packages" class="border border-green-500 text-green-500 hover:bg-green-500 hover:text-black py-2 px-6 rounded transition">
+          🧰 View Packages
+        </a>
+      </div>
+    </header>
+
+    <!-- AUDIT PACKAGES -->
+    <section id="packages" class="mb-16">
+      <h2 class="text-2xl font-bold text-purple-400 mb-4">📦 Audit Packages</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-gray-800 p-6 rounded border border-gray-700 text-center">
+          <h3 class="text-xl font-bold text-green-400">CANx Basic</h3>
+          <p class="text-gray-300 mt-2 mb-4">£150</p>
+          <ul class="text-sm text-gray-400 space-y-2 mb-6 text-left">
+            <li>✔️ Passive Recon (WHOIS, DNS, Open Ports)</li>
+            <li>✔️ Domain Exposure Scan</li>
+            <li>✔️ Phishing Domain Check + SPF Validation</li>
+            <li>✔️ Home Router / Default Config Review</li>
+          </ul>
+          <a href="#contact" class="bg-green-600 text-white py-2 px-4 rounded hover:bg-green-500">Start Basic Audit</a>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded border border-gray-700 text-center">
+          <h3 class="text-xl font-bold text-yellow-400">CANx Standard</h3>
+          <p class="text-gray-300 mt-2 mb-4">£450</p>
+          <ul class="text-sm text-gray-400 space-y-2 mb-6 text-left">
+            <li>✔️ All Basic Features</li>
+            <li>✔️ Threat Mapping (Visual Exposure Diagram)</li>
+            <li>✔️ Patch Audit (PCs, Phones, Smart Devices)</li>
+            <li>✔️ SPF, DKIM, DMARC Setup Review</li>
+            <li>✔️ Firewall & Antivirus Setup Check</li>
+          </ul>
+          <a href="#contact" class="bg-yellow-500 text-black py-2 px-4 rounded hover:bg-yellow-400">Book Standard Audit</a>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded border border-gray-700 text-center">
+          <h3 class="text-xl font-bold text-red-400">CANx Pro</h3>
+          <p class="text-gray-300 mt-2 mb-4">£900</p>
+          <ul class="text-sm text-gray-400 space-y-2 mb-6 text-left">
+            <li>✔️ All Standard Features</li>
+            <li>✔️ Ethical Exploit Simulation</li>
+            <li>✔️ Web App Audit (OWASP Top 10)</li>
+            <li>✔️ Phishing/Vishing Simulation Test</li>
+            <li>✔️ ISO/NIST/GDPR Compliance Report</li>
+            <li>✔️ 1:1 Cybersecurity Call for Next Steps</li>
+          </ul>
+          <a href="#contact" class="bg-red-600 text-white py-2 px-4 rounded hover:bg-red-500">Request Pro Audit</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mb-20">
+      <h2 class="text-2xl font-bold text-cyan-400 mb-4">📨 Contact</h2>
+      <p class="text-gray-300 mb-6">Let’s talk — no pressure, no jargon. Whether it's your home, business, or group of friends, we’re here to help you stay safe online.</p>
+      <form action="mailto:jxnesyy.cybersafe@gmail.com" method="POST" enctype="text/plain">
+        <div class="flex flex-col gap-4">
+          <input class="bg-gray-800 text-white p-3 rounded border border-gray-700" type="text" placeholder="Your Name" name="name" required />
+          <input class="bg-gray-800 text-white p-3 rounded border border-gray-700" type="email" placeholder="Your Email" name="email" required />
+          <textarea class="bg-gray-800 text-white p-3 rounded border border-gray-700" placeholder="Your Message" name="message" rows="4" required></textarea>
+          <button type="submit" class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-6 rounded transition">Send Message</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="text-center text-sm text-gray-500 border-t border-gray-800 pt-6">
+      <p>© 2025 CANxiety Security. Built by Jxnesyy | <a href="https://github.com/Jxnesyy/cyber-audit-landing" class="underline hover:text-green-400">GitHub Repo</a></p>
+    </footer>
   </div>
-
-  <script>
-    const lines = [
-      '> CANxiety Framework Booting Up... 🧠',
-      '> Diagnosing Emotional Firewall...',
-      '> Social Engineering Awareness: LOW 🔻',
-      '> Personal Confidence Cloak: WEAK ⚠️',
-      '> Scanning Digital Boundaries... 🔍',
-      '> Devices detected: 3 (1 phone, 1 laptop, 1 smart TV)',
-      '> Breach Memory Triggered: 2022 phishing attack',
-      '> Emotional impact detected: High anxiety, avoidance behaviours',
-      '> Scanning coping tools: No 2FA, weak passwords, no audit history',
-      '> Calculating Threat Score... █████████░░ 86%',
-      '> Assigning Role: Cyber Sentinel in Training 👤',
-      '> Suggested Path: CANx Pro — includes simulation, mentorship, and emotional tech coaching',
-      '',
-      '🧩 Summary: You look confident online... but you don’t feel it.',
-      'Let’s turn your anxiety into armour — one system at a time.',
-      '',
-      '📞 Type CONTACT to begin your guided transformation.'
-    ];
-
-    let idx = 0;
-    const term = document.getElementById("terminal");
-
-    function typeLine() {
-      if (idx < lines.length) {
-        const span = document.createElement("span");
-        span.textContent = lines[idx];
-        term.appendChild(span);
-        idx++;
-        setTimeout(typeLine, 1000);
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      typeLine();
-    });
-  </script>
 </body>
 </html>
