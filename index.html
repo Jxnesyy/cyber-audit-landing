@@ -141,6 +141,95 @@
       </div>
     </section>
 
+<!-- PRICE CALCULATOR -->
+<section class="mb-20">
+  <h2 class="text-2xl font-bold text-pink-400 mb-4">💸 Risk Calculator</h2>
+  <p class="text-gray-300 mb-4">Find out how much a cyber attack could cost you — and what you can save with an audit.</p>
+
+  <form id="calcForm" class="bg-gray-800 p-6 rounded border border-gray-700 space-y-4">
+    <div>
+      <label class="block text-gray-400 mb-1">You are a:</label>
+      <select id="userType" class="bg-gray-900 p-2 rounded w-full">
+        <option value="home">Home User</option>
+        <option value="freelancer">Freelancer</option>
+        <option value="business">Small Business</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-gray-400 mb-1">How many devices do you use?</label>
+      <input id="devices" type="number" min="1" value="3" class="bg-gray-900 p-2 rounded w-full" />
+    </div>
+
+    <div>
+      <label class="block text-gray-400 mb-1">Value of your data:</label>
+      <select id="dataValue" class="bg-gray-900 p-2 rounded w-full">
+        <option value="low">Low (photos, emails)</option>
+        <option value="medium">Medium (documents, contacts)</option>
+        <option value="high">High (client data, finance)</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-gray-400 mb-1">Have you been hacked or scammed before?</label>
+      <select id="priorAttack" class="bg-gray-900 p-2 rounded w-full">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+    </div>
+
+    <button type="button" onclick="calculateRisk()" class="bg-pink-600 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded">
+      🔍 Calculate Risk
+    </button>
+  </form>
+
+  <div id="calcResult" class="mt-6 bg-gray-900 p-5 rounded hidden border border-pink-500">
+    <h3 class="text-lg font-bold text-pink-300 mb-2">💥 Estimated Risk Cost:</h3>
+    <p class="text-white text-xl mb-2" id="riskCost"></p>
+    <p class="text-gray-300" id="recommendedPackage"></p>
+  </div>
+</section>
+
+<script>
+  function calculateRisk() {
+    const userType = document.getElementById("userType").value;
+    const devices = parseInt(document.getElementById("devices").value);
+    const dataValue = document.getElementById("dataValue").value;
+    const priorAttack = document.getElementById("priorAttack").value;
+
+    let baseRisk = 100;
+
+    // User type multiplier
+    if (userType === "freelancer") baseRisk *= 2;
+    if (userType === "business") baseRisk *= 4;
+
+    // Device multiplier
+    baseRisk += devices * 50;
+
+    // Data value
+    if (dataValue === "medium") baseRisk *= 1.5;
+    if (dataValue === "high") baseRisk *= 2.5;
+
+    // Prior attack
+    if (priorAttack === "yes") baseRisk += 500;
+
+    // Determine recommendation
+    let packageName = "";
+    if (baseRisk < 700) {
+      packageName = "🟢 CANx Basic is perfect for you.";
+    } else if (baseRisk < 1800) {
+      packageName = "🟡 CANx Standard is your best defence.";
+    } else {
+      packageName = "🔴 CANx Pro is strongly recommended.";
+    }
+
+    // Display results
+    document.getElementById("calcResult").classList.remove("hidden");
+    document.getElementById("riskCost").innerText = `~£${Math.round(baseRisk)} in potential losses`;
+    document.getElementById("recommendedPackage").innerText = packageName;
+  }
+</script>
+
     <!-- CONTACT -->
     <section id="contact" class="mb-20">
       <h2 class="text-2xl font-bold text-cyan-400 mb-4">📨 Contact</h2>
