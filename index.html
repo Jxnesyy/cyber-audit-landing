@@ -29,7 +29,7 @@
           🔐 Start My Audit
         </a>
         <a href="#toolkit" class="border border-green-500 text-green-500 hover:bg-green-500 hover:text-black py-2 px-6 rounded transition">
-          🧰 View Toolkit
+          🪰 View Toolkit
         </a>
       </div>
     </header>
@@ -53,7 +53,7 @@
         <!-- BASIC -->
         <div class="bg-gray-800 p-6 rounded border border-gray-700 text-center">
           <h3 class="text-xl font-bold text-green-400">CANx Basic</h3>
-          <p class="text-gray-300 mt-2 mb-4">£499</p>
+          <p class="text-gray-300 mt-2 mb-4">£150</p>
           <ul class="text-sm text-gray-400 space-y-2 mb-6 text-left">
             <li>✔️ Passive Recon (WHOIS, DNS, Open Ports)</li>
             <li>✔️ Domain Exposure Scan</li>
@@ -66,7 +66,7 @@
         <!-- STANDARD -->
         <div class="bg-gray-800 p-6 rounded border border-gray-700 text-center">
           <h3 class="text-xl font-bold text-yellow-400">CANx Standard</h3>
-          <p class="text-gray-300 mt-2 mb-4">£899</p>
+          <p class="text-gray-300 mt-2 mb-4">£450</p>
           <ul class="text-sm text-gray-400 space-y-2 mb-6 text-left">
             <li>✔️ All Basic Features</li>
             <li>✔️ Threat Mapping (Visual Exposure Diagram)</li>
@@ -80,7 +80,7 @@
         <!-- PRO -->
         <div class="bg-gray-800 p-6 rounded border border-gray-700 text-center">
           <h3 class="text-xl font-bold text-red-400">CANx Pro</h3>
-          <p class="text-gray-300 mt-2 mb-4">£1499</p>
+          <p class="text-gray-300 mt-2 mb-4">£900</p>
           <ul class="text-sm text-gray-400 space-y-2 mb-6 text-left">
             <li>✔️ All Standard Features</li>
             <li>✔️ Ethical Exploit Simulation</li>
@@ -97,7 +97,7 @@
 
     <!-- TOOLKIT -->
     <section id="toolkit" class="mb-16">
-      <h2 class="text-2xl font-bold text-blue-400 mb-4">🧰 What’s in the CANxiety Toolkit?</h2>
+      <h2 class="text-2xl font-bold text-blue-400 mb-4">🪰 What’s in the CANxiety Toolkit?</h2>
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-gray-800 p-4 rounded border border-gray-700">
           <h3 class="text-lg font-semibold text-green-300">🔍 Recon Checklist</h3>
@@ -117,118 +117,6 @@
         </div>
       </div>
     </section>
-
-    <!-- FAQ -->
-    <section class="mb-16">
-      <h2 class="text-2xl font-bold text-indigo-400 mb-4">❓Frequently Asked Questions</h2>
-      <div class="space-y-4">
-        <details class="bg-gray-800 p-4 rounded border border-gray-700">
-          <summary class="font-semibold text-green-300 cursor-pointer">How long does an audit take?</summary>
-          <p class="text-gray-400 mt-2">Basic audits take 24–48 hours. Standard and Pro audits are typically delivered in 3–5 working days.</p>
-        </details>
-        <details class="bg-gray-800 p-4 rounded border border-gray-700">
-          <summary class="font-semibold text-green-300 cursor-pointer">Will this disrupt my business or home?</summary>
-          <p class="text-gray-400 mt-2">Nope! Most scans are passive. We won't affect your internet or network unless testing is discussed in advance.</p>
-        </details>
-        <details class="bg-gray-800 p-4 rounded border border-gray-700">
-          <summary class="font-semibold text-green-300 cursor-pointer">What do I get after the audit?</summary>
-          <p class="text-gray-400 mt-2">You’ll get a full PDF report, priority action list, and direct support if you want to fix the issues.</p>
-        </details>
-        <details class="bg-gray-800 p-4 rounded border border-gray-700">
-          <summary class="font-semibold text-green-300 cursor-pointer">Do I need tech skills to use this?</summary>
-          <p class="text-gray-400 mt-2">Not at all. This service is designed for humans, not hackers. We explain everything in plain English.</p>
-        </details>
-      </div>
-    </section>
-
-<!-- PRICE CALCULATOR -->
-<section class="mb-20">
-  <h2 class="text-2xl font-bold text-pink-400 mb-4">💸 Risk Calculator</h2>
-  <p class="text-gray-300 mb-4">Find out how much a cyber attack could cost you — and what you can save with an audit.</p>
-
-  <form id="calcForm" class="bg-gray-800 p-6 rounded border border-gray-700 space-y-4">
-    <div>
-      <label class="block text-gray-400 mb-1">You are a:</label>
-      <select id="userType" class="bg-gray-900 p-2 rounded w-full">
-        <option value="home">Home User</option>
-        <option value="freelancer">Freelancer</option>
-        <option value="business">Small Business</option>
-      </select>
-    </div>
-
-    <div>
-      <label class="block text-gray-400 mb-1">How many devices do you use?</label>
-      <input id="devices" type="number" min="1" value="3" class="bg-gray-900 p-2 rounded w-full" />
-    </div>
-
-    <div>
-      <label class="block text-gray-400 mb-1">Value of your data:</label>
-      <select id="dataValue" class="bg-gray-900 p-2 rounded w-full">
-        <option value="low">Low (photos, emails)</option>
-        <option value="medium">Medium (documents, contacts)</option>
-        <option value="high">High (client data, finance)</option>
-      </select>
-    </div>
-
-    <div>
-      <label class="block text-gray-400 mb-1">Have you been hacked or scammed before?</label>
-      <select id="priorAttack" class="bg-gray-900 p-2 rounded w-full">
-        <option value="no">No</option>
-        <option value="yes">Yes</option>
-      </select>
-    </div>
-
-    <button type="button" onclick="calculateRisk()" class="bg-pink-600 hover:bg-pink-500 text-white font-bold py-2 px-4 rounded">
-      🔍 Calculate Risk
-    </button>
-  </form>
-
-  <div id="calcResult" class="mt-6 bg-gray-900 p-5 rounded hidden border border-pink-500">
-    <h3 class="text-lg font-bold text-pink-300 mb-2">💥 Estimated Risk Cost:</h3>
-    <p class="text-white text-xl mb-2" id="riskCost"></p>
-    <p class="text-gray-300" id="recommendedPackage"></p>
-  </div>
-</section>
-
-<script>
-  function calculateRisk() {
-    const userType = document.getElementById("userType").value;
-    const devices = parseInt(document.getElementById("devices").value);
-    const dataValue = document.getElementById("dataValue").value;
-    const priorAttack = document.getElementById("priorAttack").value;
-
-    let baseRisk = 100;
-
-    // User type multiplier
-    if (userType === "freelancer") baseRisk *= 2;
-    if (userType === "business") baseRisk *= 4;
-
-    // Device multiplier
-    baseRisk += devices * 50;
-
-    // Data value
-    if (dataValue === "medium") baseRisk *= 1.5;
-    if (dataValue === "high") baseRisk *= 2.5;
-
-    // Prior attack
-    if (priorAttack === "yes") baseRisk += 500;
-
-    // Determine recommendation
-    let packageName = "";
-    if (baseRisk < 700) {
-      packageName = "🟢 CANx Basic is perfect for you.";
-    } else if (baseRisk < 1800) {
-      packageName = "🟡 CANx Standard is your best defence.";
-    } else {
-      packageName = "🔴 CANx Pro is strongly recommended.";
-    }
-
-    // Display results
-    document.getElementById("calcResult").classList.remove("hidden");
-    document.getElementById("riskCost").innerText = `~£${Math.round(baseRisk)} in potential losses`;
-    document.getElementById("recommendedPackage").innerText = packageName;
-  }
-</script>
 
     <!-- CONTACT -->
     <section id="contact" class="mb-20">
